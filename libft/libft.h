@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 15:50:02 by snino             #+#    #+#             */
-/*   Updated: 2022/07/29 13:08:52 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/05 13:23:23 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-long long	ft_atoi(const char *str);
 void		ft_bzero(char *s, size_t n);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
@@ -39,6 +38,7 @@ void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
+int			ft_atoi(const char *str);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_isspace(int c);
