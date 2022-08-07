@@ -14,7 +14,8 @@
 
 void	ft_freelst(t_list *lst)
 {
-	t_list *tmp;
+	t_list	*tmp;
+
 	while (lst)
 	{
 		tmp = lst->next;

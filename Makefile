@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/08/05 17:57:38 by snino            ###   ########.fr        #
+#    Updated: 2022/08/07 14:09:58 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS := -g -lreadline -Wall -Wextra -Werror
 
 LIB		=	libft/libft.a
 
-SRCS :=		minishell.c		ft_free.c\
+SRCS :=		minishell.c		ft_parser.c		ft_free.c\
 
 OBJ := $(SRCS:%.c=%.o)
 
