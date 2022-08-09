@@ -6,119 +6,64 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/07 21:37:21 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/09 18:53:14 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int	ft_check_symbol(char line)
+void 	*ft_pars_quotes(t_mini *mini, char *line)
 {
-	if (line == 34)
-		return (1);
-	else if (line == 39)
-		return (0);
-	return (0);
-}
-
-char	*ft_pars_words1(t_mini *mini, char *line)
-{
-	char	*buff;
-	char	*tmp;
-	int		i;
-
-	tmp = ft_strchr(++line, 34);
-	if (!tmp)
-	{
-		printf(RED"ERROR_NO_CLOSED_KOVICHKA\n"END);
-		return (NULL);
-	}
+	if (ft_check_symbol(line) == 2)
+		line = ft_pars_words1(mini, line);
+	else if (ft_check_symbol(line) == 1)
+		line = ft_pars_words2(mini, line);
 	else
-	{
-		i = -1;
-		while (line[++i] != 34)
-			;
-		buff = (char *)malloc(i + 1);
-		i = -1;
-		while (line[++i] != 34)
-			buff[i] = line[i];
-		buff[i] = '\0';
-		ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
-		free(buff);
-	}
-	return (&line[i + 1]);
-}
-
-char	*ft_pars_words2(t_mini *mini, char *line)
-{
-	char	*buff;
-	char	*tmp;
-	int		i;
-
-	tmp = ft_strchr(++line, 39);
-	if (!tmp)
-	{
-		printf(RED"ERROR_NO_CLOSED_KOVICHKA\n"END);
 		return (NULL);
-	}
-	else
-	{
-		i = -1;
-		while (line[++i] != 39)
-			;
-		buff = (char *)malloc(i + 1);
-		i = -1;
-		while (line[++i] != 39)
-			buff[i] = line[i];
-		buff[i] = '\0';
-		ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
-		free(buff);
-	}
-	return (&line[i + 1]);
-}
-
-char	*ft_pars_cmd(t_mini *mini, char *line)
-{
-	char	*buff;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	while (line[i] != '\0' && line[i] != ' ' && line[i] != 34 && line[i] != 39)
-		i++;
-	buff = (char *) malloc(i);
-	while (j < i && line[j] != '\0')
-	{
-		buff[j] = line[j];
-		j++;
-	}
-	buff[i] = '\0';
-	ft_lstadd_back(&mini->com_list, ft_lstnew(ft_strdup(buff)));
-	free(buff);
-	return (&line[i]);
+	return (line);
 }
 
 void	ft_parser(t_mini *mini)
 {
 	char	*line;
-	char	*var;
 
 	line = mini->line;
 	while (line && *line)
 	{
 		while (line && *line && *line == ' ')
 			line++;
-		var = line;
-		line = var;
-		if (line && *line && (*line == 34 || *line == 39))
-		{
-			if (ft_check_symbol(line[0]))
-				line = ft_pars_words1(mini, line);
-			else
-				line = ft_pars_words2(mini, line);
-		}
-		else
+		if (line && *line && (*line == 34 || *line == 39) && *line != ' ')
+			line = ft_pars_quotes(mini, line);
+		else if (line && *line && *line != ' ' && *line == 124)
+			line = ft_pars_words3(mini, line);
+		else if (line && *line && *line != ' ' && *line == 60)
+			line = ft_pars_words4(mini, line);
+		else if (line && *line && *line != ' ' && *line == 62)
+			line = ft_pars_words5(mini, line);
+		else if (line && *line && *line != ' ' && *line == 38)
+			line = ft_pars_words6(mini, line);
+		else if (line && *line && *line != ' ' && *line == 42)
+			line = ft_pars_words7(mini, line);
+		else if(line && *line && *line != ' ')
 			line = ft_pars_cmd(mini, line);
 	}
+	ft_parser1(mini);
+	ft_parser2(mini);
 }
+
+void SHOW(t_mini *mini)
+{
+	int		i;
+	char	*tmp;
+
+	i = 0;
+	while (mini->words_list)
+	{
+		tmp = mini->words_list->content;
+		printf("%d ", i);
+		printf(BLU"%s "END MAG"%d\n"END, tmp, ft_strlen(tmp));
+		mini->words_list = mini->words_list->next;
+		i++;
+	}
+}
+

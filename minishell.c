@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/07 21:41:03 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/09 18:09:06 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ void	ft_init(t_mini *mini, char **envp)
 int	main(int argc, char **argv, char **envp)
 {
 	t_mini	mini;
-	char	*str;
-	int		i;
 
 	(void)argc;
 	(void)argv;
@@ -73,31 +71,14 @@ int	main(int argc, char **argv, char **envp)
 			add_history(mini.line);
 		if (mini.line && *mini.line)
 			ft_parser(&mini);
-		i = 0;
-		while (mini.com_list != NULL)
-		{
-			str = mini.com_list->content;
-			printf("%d ", i);
-			printf("\033[31m%s\033[0m\n", str);
-			mini.com_list = mini.com_list->next;
-			i++;
-		}
-		i = 0;
-		while (mini.words_list != NULL)
-		{
-			str = mini.words_list->content;
-			printf("%d ", i);
-			printf("\033[34m%s\033[0m\n", str);
-			mini.words_list = mini.words_list->next;
-			i++;
-		}
+		SHOW(&mini);
+		SHOW1(mini.cmd);
 		if (!mini.line)
 		{
 			mini.exit_flag = 0;
 			printf("%s"BLU"exit\n"END, mini.user);
 		}
-		ft_freelst(mini.com_list);
-		ft_freelst(mini.com_list);
+		ft_freelst(mini.words_list);
 	}
 //	ft_freelst(mini.envp_list);
 	return (0);
