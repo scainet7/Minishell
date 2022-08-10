@@ -71,7 +71,7 @@ char	*ft_pars_words6(t_mini *mini, char *line);
 char	*ft_pars_words7(t_mini *mini, char *line);
 int		ft_check_symbol(char *line);
 
-void 	SHOW(t_mini *mini);
-void	SHOW1(t_cmd *cmd);
-void	SHOW2(t_list *list);
+void 	SHOW(t_mini *mini, char *place);
+void	SHOW1(t_cmd *cmd, char *place);
+void	SHOW2(t_list *list, char *place);
 #endif

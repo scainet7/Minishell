@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:25:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 17:55:12 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/10 19:57:53 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,37 +38,36 @@ void ft_parser1(t_mini *mini)
 	mini->cmd = tmp_cmd;
 }
 
-void ft_parser2(t_mini *mini)
-{
-	t_cmd *tmp_cmd;
-//	t_ cmd *res;
-	t_list *tmp_list;
+//void ft_parser2(t_mini *mini)
+//{
+//	t_cmd *tmp_cmd;
+//	t_cmd *res;
+//	t_list *tmp_list;
 //	char **tmp;
-	char *cmd;
-	char *buff;
-	int i;
-//	int j;
-
-	tmp_cmd = mini->cmd;
-	tmp_list = NULL;
+//	char *cmd;
+//	char *buff;
+//	int i;
+//
+//	tmp_cmd = mini->cmd;
+//	tmp_list = NULL;
 //	res = NULL;
-	while (tmp_cmd)
-	{
-		i = 0;
-		while (tmp_cmd->comand[i] != NULL)
-		{
-			cmd = tmp_cmd->comand[i];
-			if (cmd[0] == 34)
-				buff = ft_strcdup(&cmd[1], 34);
-			else if (cmd[0] == 39)
-				buff = ft_strcdup(cmd, 39);
-			else
-				buff = ft_strdup(cmd);
-			ft_lstadd_back(&tmp_list, ft_lstnew(ft_strdup(buff)));
-			free(buff);
-			i++;
-		}
-		SHOW2(tmp_list);
+//	while (tmp_cmd)
+//	{
+//		i = 0;
+//		while (tmp_cmd->comand[i] != NULL)
+//		{
+//			cmd = tmp_cmd->comand[i];
+//			if (cmd[0] == 34)
+//				buff = ft_strcdup(&cmd[1], 34);
+//			else if (cmd[0] == 39)
+//				buff = ft_strcdup(cmd, 39);
+//			else
+//				buff = ft_strdup(cmd);
+//			ft_lstadd_back(&tmp_list, ft_lstnew(ft_strdup(buff)));
+//			free(buff);
+//			i++;
+//		}
+//		SHOW2(tmp_list, "parse1:");
 //		while (tmp_list)
 //		{
 //			tmp = (char **)malloc(sizeof (char *) * ft_memory_num(tmp_list));
@@ -84,17 +83,19 @@ void ft_parser2(t_mini *mini)
 //				tmp_list = tmp_list->next;
 //		}
 //		ft_freelst(tmp_list);
-		tmp_cmd = tmp_cmd->next;
-	}
-//	mini->cmd = res;
-}
+//		tmp_cmd = tmp_cmd->next;
+////		SHOW1(mini->cmd);
+//	}
+////	mini->cmd = res;
+//}
 
-void SHOW2(t_list *list)
+void SHOW2(t_list *list, char *place)
 {
 	int		i;
 	char	*tmp;
 
 	i = 0;
+	printf("%s\n", place);
 	while (list)
 	{
 		tmp = list->content;

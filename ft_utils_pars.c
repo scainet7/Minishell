@@ -72,12 +72,13 @@ int	ft_check_symbol(char *line)
 	return (0);
 }
 
- void	SHOW1(t_cmd *cmd)
+ void	SHOW1(t_cmd *cmd, char *place)
  {
  	t_cmd	*temp;
  	int		i;
 
  	temp = cmd;
+	 printf("%s\n", place);
  	while (temp)
  	{
  		i = -1;

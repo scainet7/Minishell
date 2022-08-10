@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 17:50:17 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/10 20:22:34 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static void	ft_save_username(t_mini *mini, char *envp)
 	tmp++;
 	tmp2 = ft_strjoin(GRE, ft_strdup(tmp));
 	mini->user = ft_strjoin(tmp2, GRE"@minishell$ "END);
+	free(tmp2);
 }
 
 void	ft_change_var(t_mini *mini, char *envp)
@@ -61,6 +62,7 @@ int	main(int argc, char **argv, char **envp)
 	t_mini	mini;
 	(void)argc;
 	(void)argv;
+
 	ft_init(&mini, envp);
 	while (mini.exit_flag)
 	{
@@ -71,8 +73,8 @@ int	main(int argc, char **argv, char **envp)
 		if (mini.line && *mini.line)
 		{
 			ft_parser(&mini);
-			SHOW(&mini);
-			SHOW1(mini.cmd);
+			SHOW(&mini, "main: \n");
+			SHOW1(mini.cmd, "main: \n");
 //			free(mini.cmd);
 		}
 		if (!mini.line)
@@ -81,6 +83,7 @@ int	main(int argc, char **argv, char **envp)
 			printf("%s"BLU"exit\n"END, mini.user);
 		}
 	}
+	free(mini.user);
 	ft_freelst(mini.words_list);
 //	free(mini.cmd);
 //	ft_freelst(mini.envp_list);

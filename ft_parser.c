@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 17:43:32 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/10 19:27:09 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,16 @@ void	ft_parser(t_mini *mini)
 			line = ft_pars_cmd(mini, line);
 	}
 	ft_parser1(mini);
-	ft_parser2(mini);
+//	ft_parser2(mini);
 }
 
-void SHOW(t_mini *mini)
+void SHOW(t_mini *mini, char *place)
 {
 	int		i;
 	char	*tmp;
 
 	i = 0;
+	printf("%s\n", place);
 	while (mini->words_list)
 	{
 		tmp = mini->words_list->content;

@@ -16,7 +16,7 @@ CC := gcc
 
 HEADER := minishell.h
 
-CFLAGS := -g -lreadline -Wall -Wextra -Werror
+CFLAGS := -g -lreadline #-Wall -Wextra -Werror
 
 LIB		=	libft/libft.a
 
