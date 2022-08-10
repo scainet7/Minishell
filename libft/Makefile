@@ -6,7 +6,7 @@
 #    By: snino <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 16:23:18 by snino             #+#    #+#              #
-#    Updated: 2022/08/05 13:23:23 by snino            ###   ########.fr        #
+#    Updated: 2022/08/10 16:42:54 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS		=	ft_isalnum.c			ft_isprint.c		ft_memcmp.c\
 				ft_lstadd_back.c		ft_lstadd_front.c	ft_lstclear.c\
 				ft_lstdelone.c			ft_lstiter.c		ft_lstlast.c\
 				ft_lstmap.c				ft_lstnew.c			ft_strjoin_free.c\
+				ft_strcdup.c\
 
 HEADER	= 	libft.h
 

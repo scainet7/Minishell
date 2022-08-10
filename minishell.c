@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/09 18:09:06 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/10 17:50:17 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	ft_init(t_mini *mini, char **envp)
 int	main(int argc, char **argv, char **envp)
 {
 	t_mini	mini;
-
 	(void)argc;
 	(void)argv;
 	ft_init(&mini, envp);
@@ -70,16 +69,20 @@ int	main(int argc, char **argv, char **envp)
 		if (mini.line && *mini.line)
 			add_history(mini.line);
 		if (mini.line && *mini.line)
+		{
 			ft_parser(&mini);
-		SHOW(&mini);
-		SHOW1(mini.cmd);
+			SHOW(&mini);
+			SHOW1(mini.cmd);
+//			free(mini.cmd);
+		}
 		if (!mini.line)
 		{
 			mini.exit_flag = 0;
 			printf("%s"BLU"exit\n"END, mini.user);
 		}
-		ft_freelst(mini.words_list);
 	}
+	ft_freelst(mini.words_list);
+//	free(mini.cmd);
 //	ft_freelst(mini.envp_list);
 	return (0);
 }

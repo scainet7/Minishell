@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/09 18:16:20 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/10 17:12:59 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ char	*ft_pars_words5(t_mini *mini, char *line);
 char	*ft_pars_words6(t_mini *mini, char *line);
 char	*ft_pars_words7(t_mini *mini, char *line);
 int		ft_check_symbol(char *line);
-void	SHOW1(t_cmd *cmd);
+
 void 	SHOW(t_mini *mini);
+void	SHOW1(t_cmd *cmd);
+void	SHOW2(t_list *list);
 #endif

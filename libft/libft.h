@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 15:50:02 by snino             #+#    #+#             */
-/*   Updated: 2022/08/05 13:23:23 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/10 17:36:49 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_itoa(int n);
 char		*ft_strdup(const char *s1);
+char		*ft_strcdup(const char *s, int c);
 char		*ft_strchr(char *s, int c);
 char		*ft_strrchr(char *s, int c);
 char		**ft_split(char const *s, char c);
