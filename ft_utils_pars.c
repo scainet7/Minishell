@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:43:13 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 16:42:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/12 18:41:58 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new)
 	}
 }
 
-int	ft_memory_num(t_list *words_list)
+int	ft_memory_num(t_list *words_list, char *symbol)
 {
 	t_list	*tmp;
 	int		count;
@@ -53,12 +53,25 @@ int	ft_memory_num(t_list *words_list)
 	count = 1;
 	while (tmp)
 	{
-		if (!ft_memcmp(tmp->content, "|", 2))
+		if (!ft_memcmp(tmp->content, symbol, 2))
 			break ;
 		++count;
 		tmp = tmp->next;
 	}
 	return (count);
+}
+
+void	free_tcmd(t_cmd *cmd)
+{
+	t_cmd	*temp;
+
+	while (cmd)
+	{
+		temp = cmd->next;
+		free(cmd->comand);
+		free(cmd);
+		cmd = temp;
+	}
 }
 
 int	ft_check_symbol(char *line)

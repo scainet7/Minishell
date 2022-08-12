@@ -1,4 +1,4 @@
-# Install script for directory: /Users/snino/Desktop/minishell_snino
+# Install script for directory: /Users/snino/Desktop/minishell_snino_norm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/snino/Desktop/minishell_snino/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

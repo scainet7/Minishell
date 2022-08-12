@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/snino/Desktop/minishell_snino/cmake-build-debug"
+			"value" : "/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -495,7 +495,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/snino/Desktop/minishell_snino"
+			"value" : "/Users/snino/Desktop/minishell_snino_norm"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/snino/Desktop/minishell_snino/cmake-build-debug"
+			"value" : "/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug"
 		},
 		{
 			"name" : "minishell_snino_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/snino/Desktop/minishell_snino"
+			"value" : "/Users/snino/Desktop/minishell_snino_norm"
 		}
 	],
 	"kind" : "cache",

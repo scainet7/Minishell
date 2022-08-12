@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 17:12:59 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/12 22:02:13 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,37 +39,36 @@ typedef struct s_comand
 
 typedef struct s_minishell
 {
-//	t_builtin_ptr	f_ptrs[7];
-	t_list			*envp_list;
 	t_list			*words_list;
 	t_cmd 			*cmd;
 
 	int				exit_flag;
 	char			*line;
-	char			*user;
 }		t_mini;
 
 t_cmd	*ft_cmd_new(void *cmd);
+void	free_tcmd(t_cmd *cmd);
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
-int		ft_memory_num(t_list *words_list);
+int		ft_memory_num(t_list *words_list, char *symbol);
 
 void	add_history(char *line);
 void	ft_freelst(t_list *lst);
-void	ft_change_var(t_mini *mini, char *envp);
-int		ft_memory_num(t_list *words_list);
-void	ft_parser(t_mini *mini);
-void 	*ft_pars_quotes(t_mini *mini, char *line);
-void	ft_parser1(t_mini *mini);
-void	ft_parser2(t_mini *mini);
-char	*ft_pars_cmd(t_mini *mini, char *line);
-char	*ft_pars_words1(t_mini *mini, char *line);
-char	*ft_pars_words2(t_mini *mini, char *line);
-char	*ft_pars_words3(t_mini *mini, char *line);
-char	*ft_pars_words4(t_mini *mini, char *line);
-char	*ft_pars_words5(t_mini *mini, char *line);
-char	*ft_pars_words6(t_mini *mini, char *line);
-char	*ft_pars_words7(t_mini *mini, char *line);
+
+void	ft_lexer(t_mini *mini);
+void 	*ft_lex_quotes(t_mini *mini, char *line);
+char	*ft_pars_words(t_mini *mini, char *line);
+char	*ft_pars_quotes2(t_mini *mini, char *line);
+char	*ft_pars_quotes(t_mini *mini, char *line);
+char	*ft_pars_pipe(t_mini *mini, char *line);
+char	*ft_pars_there(t_mini *mini, char *line);
+char	*ft_pars_here(t_mini *mini, char *line);
+char	*ft_pars_and(t_mini *mini, char *line);
+char	*ft_pars_star(t_mini *mini, char *line);
 int		ft_check_symbol(char *line);
+
+
+void	ft_parser(t_mini *mini);
+void	ft_parser2(t_mini *mini);
 
 void 	SHOW(t_mini *mini, char *place);
 void	SHOW1(t_cmd *cmd, char *place);

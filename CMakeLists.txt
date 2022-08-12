@@ -11,4 +11,4 @@ add_executable(minishell_snino minishell.c minishell.h libft/ft_atoi.c libft/ft_
         libft/ft_strlcpy.c libft/ft_strlen.c libft/ft_strmapi.c libft/ft_strncmp.c libft/ft_strnstr.c libft/ft_strrchr.c
         libft/ft_strtrim.c libft/ft_substr.c libft/ft_tolower.c libft/ft_toupper.c libft/get_next_line.c
         libft/get_next_line_utils.c libft/ft_lstadd_back.c libft/ft_lstadd_front.c libft/ft_lstclear.c libft/ft_lstdelone.c
-        libft/ft_lstiter.c libft/ft_lstlast.c libft/ft_lstmap.c libft/ft_lstnew.c ft_free.c libft/ft_strjoin_free.c ft_parser.c ft_parser1.c ft_utils_pars.c ft_pars_words.c ft_pars_words1.c libft/ft_strcdup.c)
+        libft/ft_lstiter.c libft/ft_lstlast.c libft/ft_lstmap.c libft/ft_lstnew.c ft_free.c libft/ft_strjoin_free.c ft_lexer.c ft_parser.c ft_utils_pars.c ft_utils_lexer.c ft_utils_lexer2.c libft/ft_strcdup.c ft_utils_parser2.c libft/ft_getword.c libft/ft_countwords.c libft/ft_getword_mod.c)

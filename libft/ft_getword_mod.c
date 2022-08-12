@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_getword_mod.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 15:04:16 by snino             #+#    #+#             */
-/*   Updated: 2022/08/12 17:50:48 by snino            ###   ########.fr       */
+/*   Created: 2022/08/12 21:05:33 by snino             #+#    #+#             */
+/*   Updated: 2022/08/12 21:51:11 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+char	*ft_getword_mod(const char *s, char delim)
 {
-	t_list	*new;
+	char	*buff;
+	int		i;
+	int 	j;
 
-	new = (t_list *)malloc(sizeof(*new));
-	if (!new)
-		return ((void *)0);
-	new -> content = content;
-	new->flag = 0;
-	new -> next = ((void *)0);
-	return (new);
+	i = 0;
+	j = 0;
+	buff = (char *)malloc(ft_countwords(s, delim) + 3);
+	buff[0] = delim;
+	while (s[++j] != delim)
+		buff[++i] = s[j];
+	buff[++i] = 34;
+	buff[++i] = '\0';
+	return (buff);
 }

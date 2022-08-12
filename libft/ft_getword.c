@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_getword.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 15:04:16 by snino             #+#    #+#             */
-/*   Updated: 2022/08/12 17:50:48 by snino            ###   ########.fr       */
+/*   Created: 2022/08/12 20:51:55 by snino             #+#    #+#             */
+/*   Updated: 2022/08/12 20:54:45 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+char	*ft_getword(const char *s, char delim)
 {
-	t_list	*new;
+	int		word_length;
+	char	*str;
 
-	new = (t_list *)malloc(sizeof(*new));
-	if (!new)
-		return ((void *)0);
-	new -> content = content;
-	new->flag = 0;
-	new -> next = ((void *)0);
-	return (new);
+	word_length = 0;
+	while (s[word_length] != '\0' && s[word_length] != delim)
+	{
+		word_length++;
+	}
+	str = ft_substr(s, 0, word_length);
+	if (str)
+	{
+		return (str);
+	}
+	return (NULL);
 }

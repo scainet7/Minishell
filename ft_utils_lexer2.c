@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:16:23 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 16:42:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/12 22:02:13 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char	*ft_pars_words5(t_mini *mini, char *line)
+char	*ft_pars_here(t_mini *mini, char *line)
 {
 	char	*buff;
 
@@ -40,7 +40,7 @@ char	*ft_pars_words5(t_mini *mini, char *line)
 	return (line);
 }
 
-char	*ft_pars_words6(t_mini *mini, char *line)
+char	*ft_pars_and(t_mini *mini, char *line)
 {
 	char	*buff;
 
@@ -57,7 +57,7 @@ char	*ft_pars_words6(t_mini *mini, char *line)
 	return (line);
 }
 
-char	*ft_pars_words7(t_mini *mini, char *line)
+char	*ft_pars_star(t_mini *mini, char *line)
 {
 	char	*buff;
 
@@ -67,6 +67,7 @@ char	*ft_pars_words7(t_mini *mini, char *line)
 		buff[0] = 42;
 		buff[1] = '\0';
 		ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
+
 		free(buff);
 		return (&line[1]);
 	}

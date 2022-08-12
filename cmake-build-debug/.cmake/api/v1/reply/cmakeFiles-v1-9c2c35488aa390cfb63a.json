@@ -121,8 +121,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/snino/Desktop/minishell_snino/cmake-build-debug",
-		"source" : "/Users/snino/Desktop/minishell_snino"
+		"build" : "/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug",
+		"source" : "/Users/snino/Desktop/minishell_snino_norm"
 	},
 	"version" : 
 	{

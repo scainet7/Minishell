@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:49:42 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 16:42:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/12 22:00:14 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char	*ft_pars_cmd(t_mini *mini, char *line)
+char	*ft_pars_words(t_mini *mini, char *line)
 {
 	char	*buff;
 	int		i;
@@ -35,55 +35,34 @@ char	*ft_pars_cmd(t_mini *mini, char *line)
 	return (&line[i]);
 }
 
-char	*ft_pars_words1(t_mini *mini, char *line)
+char	*ft_pars_quotes2(t_mini *mini, char *line)
 {
 	char	*buff;
-	int		i;
-	int		j;
+	int		len;
 
-	i = -1;
-	j = -1;
-	line++;
-	while (line[++i] != 34)
-		;
-	i = i + 2;
-	buff = (char *)malloc(i);
-	i = 0;
-	buff[0] = 34;
-	while (line[++j] != 34)
-		buff[++i] = line[j];
-	buff[++i] = 34;
-	buff[++i] = '\0';
+	buff = ft_getword_mod(line, 34);
 	ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
+	ft_lstlast(mini->words_list)->flag = 1;
+	len = ft_strlen(buff);
 	free(buff);
-	return (&line[++j]);
+	return (&line[len]);
+
 }
 
-char	*ft_pars_words2(t_mini *mini, char *line)
+char	*ft_pars_quotes(t_mini *mini, char *line)
 {
 	char	*buff;
-	int		i;
-	int		j;
+	int		len;
 
-	i = -1;
-	j = -1;
-	line++;
-	while (line[++i] != 39)
-		;
-	i = i + 2;
-	buff = (char *)malloc(i);
-	i = 0;
-	buff[0] = 39;
-	while (line[++j] != 39)
-		buff[++i] = line[j];
-	buff[++i] = 39;
-	buff[++i] = '\0';
+	buff = ft_getword_mod(line, 39);
 	ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
+	ft_lstlast(mini->words_list)->flag = 1;
+	len = ft_strlen(buff);
 	free(buff);
-	return (&line[++j]);
+	return (&line[len]);
 }
 
-char	*ft_pars_words3(t_mini *mini, char *line)
+char	*ft_pars_pipe(t_mini *mini, char *line)
 {
 	char	*buff;
 
@@ -109,7 +88,7 @@ char	*ft_pars_words3(t_mini *mini, char *line)
 	return (line);
 }
 
-char	*ft_pars_words4(t_mini *mini, char *line)
+char	*ft_pars_there(t_mini *mini, char *line)
 {
 	char	*buff;
 
