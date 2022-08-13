@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/12 19:54:29 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/13 14:24:47 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 void 	*ft_lex_quotes(t_mini *mini, char *line)
 {
 	if (ft_check_symbol(line) == 2)
-		line = ft_pars_quotes2(mini, line);
+		line = ft_pars_quotes(mini, line, 34);
 	else if (ft_check_symbol(line) == 1)
-		line = ft_pars_quotes(mini, line);
+		line = ft_pars_quotes(mini, line, 39);
 	else
+	{
+		mini->error = 1;
 		return (NULL);
+	}
 	return (line);
 }
 
@@ -36,30 +39,53 @@ void	ft_lexer(t_mini *mini)
 		if (line && *line && (*line == 34 || *line == 39) && *line != ' ')
 			line = ft_lex_quotes(mini, line);
 		else if (line && *line && *line != ' ' && *line == 124)
-			line = ft_pars_pipe(mini, line);
+			line = ft_pars_symb(mini, line, 124);
 		else if (line && *line && *line != ' ' && *line == 60)
-			line = ft_pars_there(mini, line);
+			line = ft_pars_symb(mini, line, 60);
 		else if (line && *line && *line != ' ' && *line == 62)
-			line = ft_pars_here(mini, line);
-//		else if (line && *line && *line != ' ' && *line == 38)
-//			line = ft_pars_and(mini, line);
-//		else if (line && *line && *line != ' ' && *line == 42)
-//			line = ft_pars_star(mini, line);
+			line = ft_pars_symb(mini, line, 62);
 		else if(line && *line && *line != ' ')
 			line = ft_pars_words(mini, line);
 	}
+	SHOW(mini->words_list, "lexer: ");
+	if (!mini->error)
+//		ft_lexer2(mini);
+		;
+	else
+		printf(RED"ERROR\n"END);
 }
 
-void SHOW(t_mini *mini, char *place)
+void 	ft_lexer2(t_mini *mini)
+{
+	char 	*tmp;
+	char	*buff;
+
+	mini->words_list_mod = NULL;
+	while (mini->words_list)
+	{
+		tmp = mini->words_list->content;
+		if (tmp[0] == 34)
+			buff = ft_strcdup(&tmp[1], 34);
+		else if (tmp[0] == 39)
+			buff = ft_strcdup(&tmp[1], 39);
+		else
+			buff = ft_strdup(tmp);
+		ft_lstadd_back(&mini->words_list_mod, ft_lstnew(ft_strdup(buff)));
+		if (tmp[0] == 34 || tmp[0] == 39)
+			ft_lstlast(mini->words_list_mod)->flag = 1;
+		free(buff);
+		mini->words_list = mini->words_list->next;
+	}
+}
+
+void SHOW(t_list *list, char *place)
 {
 	int		i;
 	char	*tmp;
-	t_list 	*list;
 	int 	ds;
 
 	i = 0;
 	printf("%s\n", place);
-	list = mini->words_list;
 	while (list)
 	{
 		tmp = list->content;

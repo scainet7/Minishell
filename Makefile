@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/08/12 16:08:38 by snino            ###   ########.fr        #
+#    Updated: 2022/08/12 16:13:24 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ LIB		=	libft/libft.a
 
 SRCS :=		minishell.c		ft_lexer.c		ft_parser.c\
 			ft_utils_pars.c	ft_utils_lexer.c	ft_utils_lexer2.c\
-			ft_free.c\
+			ft_free.c		ft_lexer2.c\
 
 OBJ := $(SRCS:%.c=%.o)
 

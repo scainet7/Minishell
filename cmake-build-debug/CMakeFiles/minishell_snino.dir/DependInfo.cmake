@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/snino/Desktop/minishell_snino_norm/ft_free.c" "CMakeFiles/minishell_snino.dir/ft_free.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_free.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_lexer.c" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_lexer2.c" "CMakeFiles/minishell_snino.dir/ft_lexer2.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_lexer2.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_parser.c" "CMakeFiles/minishell_snino.dir/ft_parser.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_parser.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_lexer.c" "CMakeFiles/minishell_snino.dir/ft_utils_lexer.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_lexer.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_lexer2.c" "CMakeFiles/minishell_snino.dir/ft_utils_lexer2.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_lexer2.c.o.d"

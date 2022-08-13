@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell_snino.dir/ft_free.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_lexer.c.o"
   "CMakeFiles/minishell_snino.dir/ft_lexer.c.o.d"
+  "CMakeFiles/minishell_snino.dir/ft_lexer2.c.o"
+  "CMakeFiles/minishell_snino.dir/ft_lexer2.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_parser.c.o"
   "CMakeFiles/minishell_snino.dir/ft_parser.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_utils_lexer.c.o"

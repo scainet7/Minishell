@@ -177,6 +177,30 @@ ft_lexer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer.c.s
 .PHONY : ft_lexer.c.s
 
+ft_lexer2.o: ft_lexer2.c.o
+.PHONY : ft_lexer2.o
+
+# target to build an object file
+ft_lexer2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer2.c.o
+.PHONY : ft_lexer2.c.o
+
+ft_lexer2.i: ft_lexer2.c.i
+.PHONY : ft_lexer2.i
+
+# target to preprocess a source file
+ft_lexer2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer2.c.i
+.PHONY : ft_lexer2.c.i
+
+ft_lexer2.s: ft_lexer2.c.s
+.PHONY : ft_lexer2.s
+
+# target to generate assembly for a file
+ft_lexer2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer2.c.s
+.PHONY : ft_lexer2.c.s
+
 ft_parser.o: ft_parser.c.o
 .PHONY : ft_parser.o
 
@@ -1512,6 +1536,9 @@ help:
 	@echo "... ft_lexer.o"
 	@echo "... ft_lexer.i"
 	@echo "... ft_lexer.s"
+	@echo "... ft_lexer2.o"
+	@echo "... ft_lexer2.i"
+	@echo "... ft_lexer2.s"
 	@echo "... ft_parser.o"
 	@echo "... ft_parser.i"
 	@echo "... ft_parser.s"

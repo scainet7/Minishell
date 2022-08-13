@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include "libft.h"
-
 char	*ft_strcdup(const char *s, int c)
 {
 	char    *copy;

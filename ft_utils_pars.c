@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:43:13 by snino             #+#    #+#             */
-/*   Updated: 2022/08/12 18:41:58 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/12 19:05:33 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_cmd	*ft_cmd_new(void *cmd)
 	return (new_cmd);
 }
 
-
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new)
 {
 	t_cmd	*last;
@@ -44,7 +43,7 @@ void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new)
 	}
 }
 
-int	ft_memory_num(t_list *words_list, char *symbol)
+int	ft_memory_num(t_list *words_list, char *symbol, int len)
 {
 	t_list	*tmp;
 	int		count;
@@ -53,7 +52,7 @@ int	ft_memory_num(t_list *words_list, char *symbol)
 	count = 1;
 	while (tmp)
 	{
-		if (!ft_memcmp(tmp->content, symbol, 2))
+		if (!ft_memcmp(tmp->content, symbol, len))
 			break ;
 		++count;
 		tmp = tmp->next;
@@ -72,17 +71,6 @@ void	free_tcmd(t_cmd *cmd)
 		free(cmd);
 		cmd = temp;
 	}
-}
-
-int	ft_check_symbol(char *line)
-{
-	if (line[0] == 39 && ft_strchr(++line, 39))
-		return (1);
-	else if (line[0] == 34 && ft_strchr(++line, 34))
-		return (2);
-	else
-		printf(RED"ERROR_NO_CLOSED_KOVICHKA\n"END);
-	return (0);
 }
 
  void	SHOW1(t_cmd *cmd, char *place)
