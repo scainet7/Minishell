@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 12:44:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 13:49:26 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ typedef struct s_comand
 
 typedef struct s_minishell
 {
+	t_list 			*envp_list;
 	t_list			*words_list;
-	t_cmd 			*cmd;
 	t_list 			*words_list_mod;
+	t_cmd 			*cmd;
+
 	int				exit_flag;
 	char			*line;
 	int 			error;
@@ -64,11 +66,11 @@ char	*ft_pars_star_and(t_mini *mini, char *line);
 int		ft_check_symbol(char *line);
 
 void 	ft_lexer2(t_mini *mini);
-char 	*ft_check_dollar(char *str, char *buff);
-char 	*ft_split_dollar(char *str, char *buff);
-char 	*ft_join_dollar(t_list *list, char *buff);
+char 	*ft_check_dollar(t_mini *mini, char *str, char *buff);
+char 	*ft_split_dollar(t_mini *mini, char *str, char *buff);
+char 	*ft_join_dollar(t_list *list);
 char 	*ft_pars_dollar(char *str);
-char	*ft_pars_chtoto(char *str);
+char	*ft_pars_envp(t_mini *mini, char *str);
 
 
 void	ft_parser(t_mini *mini);

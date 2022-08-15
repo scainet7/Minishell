@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 12:55:20 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 13:49:26 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,9 @@ void 	ft_lexer2(t_mini *mini)
 		if (list->flag == 1)
 			buff = ft_strdup(tmp);
 		if (list->flag == 2)
-			buff = ft_check_dollar(tmp, buff);
-//			buff = ft_strdup(tmp);
+			buff = ft_check_dollar(mini, tmp, buff);
 		if (list->flag == 0)
-			buff = ft_check_dollar(tmp, buff);
-//			buff = ft_strdup(tmp);
+			buff = ft_check_dollar(mini, tmp, buff);
 		ft_lstadd_back(&mini->words_list_mod, ft_lstnew(ft_strdup(buff)));
 		if (list->flag == 1)
 			ft_lstlast(mini->words_list_mod)->flag = 1;

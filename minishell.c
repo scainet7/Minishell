@@ -6,11 +6,42 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/13 13:58:53 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:00:08 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+static void	ft_change_var(t_mini *mini, char *envp)
+{
+	char	*pwd;
+
+	pwd = getcwd(NULL, 1024);
+	if (!ft_memcmp(envp, "OLDPWD=", 7))
+		envp = ft_strdup("OLDPWD");
+	else if (!ft_memcmp(envp, "SHLVL=", 6))
+		envp = ft_strjoin_free("SHLVL=", ft_itoa(ft_atoi(envp + 6) + 1), 3);
+	else if (!ft_memcmp(envp, "PATH=", 5) && !ft_strnstr(envp, pwd, ft_strlen(envp)))
+	{
+		envp = ft_strjoin(envp, ":");
+		envp = ft_strjoin_free(envp, getcwd(NULL, 1024), 6);
+	}
+	else
+		envp = ft_strdup(envp);
+	ft_lstadd_back(&mini->envp_list, ft_lstnew(envp));
+	free(pwd);
+}
+
+static void	ft_init(t_mini *mini, char **envp)
+{
+	int	i;
+
+	i = 0;
+	mini->exit_flag = 1;
+	mini->envp_list = ft_lstnew(ft_strdup(envp[i]));
+	while (envp[++i])
+		ft_change_var(mini, envp[i]);
+}
 
 int	main(int argc, char **argv, char **envp)
 {
@@ -20,9 +51,10 @@ int	main(int argc, char **argv, char **envp)
 	(void)envp;
 
 	mini.exit_flag = 1;
-	mini.error = 0;
+	ft_init(&mini, envp);
 	while (mini.exit_flag)
 	{
+		mini.error = 0;
 		rl_replace_line("", 0);
 		mini.line = readline(MAG"username@minishell "END);
 		if (mini.line && *mini.line)
@@ -30,6 +62,9 @@ int	main(int argc, char **argv, char **envp)
 		if (mini.line && *mini.line)
 		{
 			ft_lexer(&mini);
+			ft_parser(&mini);
+			SHOW1(mini.cmd, "main: ");
+			free_tcmd(mini.cmd);
 			ft_freelst(mini.words_list);
 			ft_freelst(mini.words_list_mod);
 		}

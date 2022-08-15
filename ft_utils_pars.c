@@ -72,22 +72,3 @@ void	free_tcmd(t_cmd *cmd)
 		cmd = temp;
 	}
 }
-
- void	SHOW1(t_cmd *cmd, char *place)
- {
- 	t_cmd	*temp;
- 	int		i;
-
- 	temp = cmd;
-	 printf("%s\n", place);
- 	while (temp)
- 	{
- 		i = -1;
- 		printf("SHOW:%d-> ", i + 2);
- 		while (temp->comand[++i])
- 			printf("'%s':%zu ", temp->comand[i], (size_t)ft_strlen(temp->comand[i]));
- 		printf("| fd.in->%d fd.out->%d", cmd->fd[0], cmd->fd[1]);
- 		printf("\n");
- 		temp = temp->next;
- 	}
- }

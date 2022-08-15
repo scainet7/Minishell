@@ -6,27 +6,56 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 11:01:39 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 13:12:44 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 14:46:02 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char *ft_pars_chtoto(char *str)
+static char	*ft_trim_envp(char *str)
 {
-	char	*tmp;
-	char 	*buff;
-	int 	i;
-	int 	j;
+	char *tmp;
 
-	i = 0;
-	j = -1;
-	tmp = (char *)malloc(ft_strlen(str));
-	while (ft_isalnum(tmp[++i]))
-		tmp[++j] = tmp[i];
-	tmp[++j] = '\0';
-	buff = ft_strdup("snino");
-	free(tmp);
+	tmp = ft_strchr(str, '=');
+	tmp = &tmp[1];
+	return (tmp);
+}
+
+static char *ft_check_envplist(t_mini *mini, char *str)
+{
+	t_list	*tmp_list;
+	char 	*buff;
+	char 	*tmp_str;
+	char 	*tmp;
+
+	tmp = &str[1];
+	tmp_list = mini->envp_list;
+	buff = NULL;
+	while (tmp_list)
+	{
+		tmp_str = tmp_list->content;
+		if (!ft_memcmp(tmp_str, tmp, ft_strlen(tmp)))
+		{
+			buff = ft_trim_envp(tmp_str);
+			break ;
+		}
+		else
+			tmp_list = tmp_list->next;
+	}
+	if (buff == NULL)
+		buff = " ";
+	return (buff);
+
+}
+
+char *ft_pars_envp(t_mini *mini, char *str)
+{
+	char 	*buff;
+
+	if (ft_strlen(str) == 1)
+		buff = ft_strdup("$");
+	else
+		buff = ft_strdup(ft_check_envplist(mini, str));
 	return (buff);
 }
 
