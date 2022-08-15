@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:35:47 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 16:14:33 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@
 # include <stdarg.h>
 # include <fcntl.h>
 # include <errno.h>
+
+# define P_IN 1
+# define P_OUT 0
 
 typedef struct s_comand
 {
@@ -73,6 +76,11 @@ char	*ft_pars_dollar(char *str);
 char	*ft_pars_envp(t_mini *mini, char *str);
 
 void	ft_parser(t_mini *mini);
+void	ft_pars_redirect(t_mini *mini);
+void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i);
+void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i);
+void	ft_heredoc(t_cmd *tmp, int i);
+int		ft_pars_error(t_mini *mini, char *file, int error);
 
 void	show(t_list *list, char *place);
 void	show1(t_cmd *cmd, char *place);

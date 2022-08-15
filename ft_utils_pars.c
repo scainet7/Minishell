@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:43:13 by snino             #+#    #+#             */
-/*   Updated: 2022/08/12 19:05:33 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 16:14:33 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,21 @@ void	free_tcmd(t_cmd *cmd)
 		free(cmd);
 		cmd = temp;
 	}
+}
+
+int	ft_pars_error(t_mini *mini, char *file, int error)
+{
+	if (error == 1)
+		ft_putstr_fd("shell: syntax error near unexpected token `newline'\n", 2);
+	else if (error == 2)
+		ft_putstr_fd("shell: syntax error near unexpected token `|'\n", 2);
+	if (error == 1 || error == 2)
+		return (258);
+	if (error == 3)
+	{
+		ft_putstr_fd("shell: ", 2);
+		perror(file);
+		mini->error = 1;
+	}
+	return (1);
 }
