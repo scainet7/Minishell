@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 17:37:32 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 17:37:46 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:32:01 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 char	*ft_strcdup(const char *s, int c)
 {
-	char    *copy;
-	size_t  i;
+	char	*copy;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != (char)c && s[i] != '\0')
 		i++;
-	if (!(copy = malloc(sizeof(char) * i + 1)))
+	copy = malloc(sizeof(char) * i + 1);
+	if (!copy)
 		return (NULL);
 	copy[i] = '\0';
 	while (i-- > 0)

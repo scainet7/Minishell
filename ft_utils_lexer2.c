@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:16:23 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 13:49:26 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 14:21:48 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char 	*ft_check_dollar(t_mini *mini, char *str, char *buff)
+char	*ft_check_dollar(t_mini *mini, char *str, char *buff)
 {
 	if (ft_strchr(str, '$'))
 		buff = ft_split_dollar(mini, str, buff);
@@ -21,11 +21,11 @@ char 	*ft_check_dollar(t_mini *mini, char *str, char *buff)
 	return (buff);
 }
 
-char 	*ft_split_dollar(t_mini *mini, char *str, char *buff)
+char	*ft_split_dollar(t_mini *mini, char *str, char *buff)
 {
 	t_list	*tmp_list;
 	char	*tmp_str;
-	char 	*tmp;
+	char	*tmp;
 	char	*res;
 
 	tmp_str = str;
@@ -50,12 +50,12 @@ char 	*ft_split_dollar(t_mini *mini, char *str, char *buff)
 	return (buff);
 }
 
-char 	*ft_join_dollar(t_list *list)
+char	*ft_join_dollar(t_list *list)
 {
 	t_list	*tmp_list;
 	char	*tmp;
 	char	*res;
-	int 	len;
+	int		len;
 
 	len = 1;
 	tmp_list = list;

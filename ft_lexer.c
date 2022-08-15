@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 13:49:26 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:21:28 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void 	*ft_lex_quotes(t_mini *mini, char *line)
+void	*ft_lex_quotes(t_mini *mini, char *line)
 {
 	if (ft_check_symbol(line) == 2)
 		line = ft_pars_quotes(mini, line, 34);
@@ -46,21 +46,19 @@ void	ft_lexer(t_mini *mini)
 			line = ft_pars_symb(mini, line, 62);
 		else if (line && *line && *line != ' ' && (*line == 38 || *line == 42))
 			line = ft_pars_star_and(mini, line);
-		else if(line && *line && *line != ' ')
+		else if (line && *line && *line != ' ')
 			line = ft_pars_words(mini, line);
 	}
-	SHOW(mini->words_list, "lexer: ");
 	if (!mini->error)
 		ft_lexer2(mini);
 	else
 		printf(RED"ERROR\n"END);
-	SHOW(mini->words_list_mod, "lexer2: ");
 }
 
-void 	ft_lexer2(t_mini *mini)
+void	ft_lexer2(t_mini *mini)
 {
 	t_list	*list;
-	char 	*tmp;
+	char	*tmp;
 	char	*buff;
 
 	list = mini->words_list;
@@ -86,11 +84,11 @@ void 	ft_lexer2(t_mini *mini)
 	}
 }
 
-void SHOW(t_list *list, char *place)
+void	show(t_list *list, char *place)
 {
 	int		i;
 	char	*tmp;
-	int 	ds;
+	int		ds;
 
 	i = 0;
 	printf("%s\n", place);

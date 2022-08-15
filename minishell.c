@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:00:08 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:37:08 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static void	ft_change_var(t_mini *mini, char *envp)
 		envp = ft_strdup("OLDPWD");
 	else if (!ft_memcmp(envp, "SHLVL=", 6))
 		envp = ft_strjoin_free("SHLVL=", ft_itoa(ft_atoi(envp + 6) + 1), 3);
-	else if (!ft_memcmp(envp, "PATH=", 5) && !ft_strnstr(envp, pwd, ft_strlen(envp)))
+	else if (!ft_memcmp(envp, "PATH=", 5) \
+			&& !ft_strnstr(envp, pwd, ft_strlen(envp)))
 	{
 		envp = ft_strjoin(envp, ":");
 		envp = ft_strjoin_free(envp, getcwd(NULL, 1024), 6);
@@ -46,10 +47,9 @@ static void	ft_init(t_mini *mini, char **envp)
 int	main(int argc, char **argv, char **envp)
 {
 	t_mini	mini;
+
 	(void)argc;
 	(void)argv;
-	(void)envp;
-
 	mini.exit_flag = 1;
 	ft_init(&mini, envp);
 	while (mini.exit_flag)
@@ -63,7 +63,9 @@ int	main(int argc, char **argv, char **envp)
 		{
 			ft_lexer(&mini);
 			ft_parser(&mini);
-			SHOW1(mini.cmd, "main: ");
+			show(mini.words_list, "lexer: ");
+			show(mini.words_list_mod, "lexer2: ");
+			show1(mini.cmd, "main: ");
 			free_tcmd(mini.cmd);
 			ft_freelst(mini.words_list);
 			ft_freelst(mini.words_list_mod);

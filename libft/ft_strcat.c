@@ -6,16 +6,16 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:24:36 by snino             #+#    #+#             */
-/*   Updated: 2022/08/13 17:24:48 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:30:29 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strcat(char *dst, char *src)
+char	*ft_strcat(char *dst, char *src)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;

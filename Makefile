@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/08/12 16:13:24 by snino            ###   ########.fr        #
+#    Updated: 2022/08/15 11:45:28 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC := gcc
 
 HEADER := minishell.h
 
-CFLAGS := -g -lreadline #-Wall -Wextra -Werror
+CFLAGS := -g -lreadline -Wall -Wextra -Werror
 
 LIB		=	libft/libft.a
 

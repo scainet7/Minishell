@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:49:42 by snino             #+#    #+#             */
-/*   Updated: 2022/08/13 14:39:35 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:25:12 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ char	*ft_pars_words(t_mini *mini, char *line)
 
 	i = 0;
 	j = 0;
-	while (line[i] != '\0' && line[i] != ' ' && line[i] != 34 && line[i] != 39 && line[i] != 124 &&
-		   line[i] != 60 && line[i] != 62 && line[i] != 38 && line[i] != 42)
+	while (line[i] != '\0' && line[i] != ' ' && line[i] != 34 && line[i] != 39 \
+		&& line[i] != 124 && line[i] != 60 && line[i] != 62 && line[i] != 38 \
+		&& line[i] != 42)
 		i++;
 	buff = (char *) malloc(i);
 	while (j < i && line[j] != '\0')
