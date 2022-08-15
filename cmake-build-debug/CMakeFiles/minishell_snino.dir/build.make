@@ -881,6 +881,34 @@ CMakeFiles/minishell_snino.dir/ft_lexer2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_snino.dir/ft_lexer2.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/snino/Desktop/minishell_snino_norm/ft_lexer2.c -o CMakeFiles/minishell_snino.dir/ft_lexer2.c.s
 
+CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o: CMakeFiles/minishell_snino.dir/flags.make
+CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o: ../libft/ft_strcat.c
+CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o: CMakeFiles/minishell_snino.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o -MF CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o.d -o CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o -c /Users/snino/Desktop/minishell_snino_norm/libft/ft_strcat.c
+
+CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/snino/Desktop/minishell_snino_norm/libft/ft_strcat.c > CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.i
+
+CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/snino/Desktop/minishell_snino_norm/libft/ft_strcat.c -o CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.s
+
+CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o: CMakeFiles/minishell_snino.dir/flags.make
+CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o: ../ft_utils_pars_dollar.c
+CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o: CMakeFiles/minishell_snino.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o -MF CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o.d -o CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o -c /Users/snino/Desktop/minishell_snino_norm/ft_utils_pars_dollar.c
+
+CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/snino/Desktop/minishell_snino_norm/ft_utils_pars_dollar.c > CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.i
+
+CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/snino/Desktop/minishell_snino_norm/ft_utils_pars_dollar.c -o CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.s
+
 # Object files for target minishell_snino
 minishell_snino_OBJECTS = \
 "CMakeFiles/minishell_snino.dir/minishell.c.o" \
@@ -940,7 +968,9 @@ minishell_snino_OBJECTS = \
 "CMakeFiles/minishell_snino.dir/libft/ft_getword.c.o" \
 "CMakeFiles/minishell_snino.dir/libft/ft_countwords.c.o" \
 "CMakeFiles/minishell_snino.dir/libft/ft_getword_mod.c.o" \
-"CMakeFiles/minishell_snino.dir/ft_lexer2.c.o"
+"CMakeFiles/minishell_snino.dir/ft_lexer2.c.o" \
+"CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o" \
+"CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o"
 
 # External object files for target minishell_snino
 minishell_snino_EXTERNAL_OBJECTS =
@@ -1003,9 +1033,11 @@ minishell_snino: CMakeFiles/minishell_snino.dir/libft/ft_getword.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/libft/ft_countwords.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/libft/ft_getword_mod.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/ft_lexer2.c.o
+minishell_snino: CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o
+minishell_snino: CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/build.make
 minishell_snino: CMakeFiles/minishell_snino.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking C executable minishell_snino"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Linking C executable minishell_snino"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell_snino.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

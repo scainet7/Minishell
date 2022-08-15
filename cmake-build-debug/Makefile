@@ -297,6 +297,30 @@ ft_utils_pars.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_pars.c.s
 .PHONY : ft_utils_pars.c.s
 
+ft_utils_pars_dollar.o: ft_utils_pars_dollar.c.o
+.PHONY : ft_utils_pars_dollar.o
+
+# target to build an object file
+ft_utils_pars_dollar.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o
+.PHONY : ft_utils_pars_dollar.c.o
+
+ft_utils_pars_dollar.i: ft_utils_pars_dollar.c.i
+.PHONY : ft_utils_pars_dollar.i
+
+# target to preprocess a source file
+ft_utils_pars_dollar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.i
+.PHONY : ft_utils_pars_dollar.c.i
+
+ft_utils_pars_dollar.s: ft_utils_pars_dollar.c.s
+.PHONY : ft_utils_pars_dollar.s
+
+# target to generate assembly for a file
+ft_utils_pars_dollar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.s
+.PHONY : ft_utils_pars_dollar.c.s
+
 ft_utils_parser2.o: ft_utils_parser2.c.o
 .PHONY : ft_utils_parser2.o
 
@@ -1041,6 +1065,30 @@ libft/ft_split.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_split.c.s
 .PHONY : libft/ft_split.c.s
 
+libft/ft_strcat.o: libft/ft_strcat.c.o
+.PHONY : libft/ft_strcat.o
+
+# target to build an object file
+libft/ft_strcat.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.o
+.PHONY : libft/ft_strcat.c.o
+
+libft/ft_strcat.i: libft/ft_strcat.c.i
+.PHONY : libft/ft_strcat.i
+
+# target to preprocess a source file
+libft/ft_strcat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.i
+.PHONY : libft/ft_strcat.c.i
+
+libft/ft_strcat.s: libft/ft_strcat.c.s
+.PHONY : libft/ft_strcat.s
+
+# target to generate assembly for a file
+libft/ft_strcat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_strcat.c.s
+.PHONY : libft/ft_strcat.c.s
+
 libft/ft_strcdup.o: libft/ft_strcdup.c.o
 .PHONY : libft/ft_strcdup.o
 
@@ -1551,6 +1599,9 @@ help:
 	@echo "... ft_utils_pars.o"
 	@echo "... ft_utils_pars.i"
 	@echo "... ft_utils_pars.s"
+	@echo "... ft_utils_pars_dollar.o"
+	@echo "... ft_utils_pars_dollar.i"
+	@echo "... ft_utils_pars_dollar.s"
 	@echo "... ft_utils_parser2.o"
 	@echo "... ft_utils_parser2.i"
 	@echo "... ft_utils_parser2.s"
@@ -1644,6 +1695,9 @@ help:
 	@echo "... libft/ft_split.o"
 	@echo "... libft/ft_split.i"
 	@echo "... libft/ft_split.s"
+	@echo "... libft/ft_strcat.o"
+	@echo "... libft/ft_strcat.i"
+	@echo "... libft/ft_strcat.s"
 	@echo "... libft/ft_strcdup.o"
 	@echo "... libft/ft_strcdup.i"
 	@echo "... libft/ft_strcdup.s"

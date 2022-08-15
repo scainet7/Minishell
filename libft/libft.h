@@ -58,6 +58,7 @@ char		*ft_strcdup(const char *s, int c);
 char		*ft_strchr(char *s, int c);
 char		*ft_strrchr(char *s, int c);
 char		**ft_split(char const *s, char c);
+char    	*ft_strcat(char *dst, char *src);
 char		*ft_getword(const char *s, char delim);
 char		*ft_getword_mod(const char *s, char delim);
 char		*ft_strjoin(char const *s1, char const *s2);

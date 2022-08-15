@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/13 14:24:47 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/15 12:55:20 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,37 +44,47 @@ void	ft_lexer(t_mini *mini)
 			line = ft_pars_symb(mini, line, 60);
 		else if (line && *line && *line != ' ' && *line == 62)
 			line = ft_pars_symb(mini, line, 62);
+		else if (line && *line && *line != ' ' && (*line == 38 || *line == 42))
+			line = ft_pars_star_and(mini, line);
 		else if(line && *line && *line != ' ')
 			line = ft_pars_words(mini, line);
 	}
 	SHOW(mini->words_list, "lexer: ");
 	if (!mini->error)
-//		ft_lexer2(mini);
-		;
+		ft_lexer2(mini);
 	else
 		printf(RED"ERROR\n"END);
+	SHOW(mini->words_list_mod, "lexer2: ");
 }
 
 void 	ft_lexer2(t_mini *mini)
 {
+	t_list	*list;
 	char 	*tmp;
 	char	*buff;
 
+	list = mini->words_list;
 	mini->words_list_mod = NULL;
-	while (mini->words_list)
+	while (list)
 	{
-		tmp = mini->words_list->content;
-		if (tmp[0] == 34)
-			buff = ft_strcdup(&tmp[1], 34);
-		else if (tmp[0] == 39)
-			buff = ft_strcdup(&tmp[1], 39);
-		else
+		tmp = list->content;
+		if (list->flag == 1)
 			buff = ft_strdup(tmp);
+		if (list->flag == 2)
+			buff = ft_check_dollar(tmp, buff);
+//			buff = ft_strdup(tmp);
+		if (list->flag == 0)
+			buff = ft_check_dollar(tmp, buff);
+//			buff = ft_strdup(tmp);
 		ft_lstadd_back(&mini->words_list_mod, ft_lstnew(ft_strdup(buff)));
-		if (tmp[0] == 34 || tmp[0] == 39)
+		if (list->flag == 1)
 			ft_lstlast(mini->words_list_mod)->flag = 1;
+		else if (list->flag == 2)
+			ft_lstlast(mini->words_list_mod)->flag = 2;
+		else
+			ft_lstlast(mini->words_list_mod)->flag = 0;
+		list = list->next;
 		free(buff);
-		mini->words_list = mini->words_list->next;
 	}
 }
 

@@ -20,9 +20,9 @@ CFLAGS := -g -lreadline #-Wall -Wextra -Werror
 
 LIB		=	libft/libft.a
 
-SRCS :=		minishell.c		ft_lexer.c		ft_parser.c\
+SRCS :=		minishell.c		ft_lexer.c			ft_parser.c\
 			ft_utils_pars.c	ft_utils_lexer.c	ft_utils_lexer2.c\
-			ft_free.c		ft_lexer2.c\
+			ft_free.c		ft_lexer2.c			ft_utils_pars_dollar.c\
 
 OBJ := $(SRCS:%.c=%.o)
 

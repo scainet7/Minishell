@@ -31,6 +31,7 @@ int	main(int argc, char **argv, char **envp)
 		{
 			ft_lexer(&mini);
 			ft_freelst(mini.words_list);
+			ft_freelst(mini.words_list_mod);
 		}
 		if (!mini.line)
 		{
