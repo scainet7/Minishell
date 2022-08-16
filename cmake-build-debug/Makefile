@@ -129,30 +129,6 @@ minishell_snino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/build
 .PHONY : minishell_snino/fast
 
-ft_free.o: ft_free.c.o
-.PHONY : ft_free.o
-
-# target to build an object file
-ft_free.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_free.c.o
-.PHONY : ft_free.c.o
-
-ft_free.i: ft_free.c.i
-.PHONY : ft_free.i
-
-# target to preprocess a source file
-ft_free.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_free.c.i
-.PHONY : ft_free.c.i
-
-ft_free.s: ft_free.c.s
-.PHONY : ft_free.s
-
-# target to generate assembly for a file
-ft_free.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_free.c.s
-.PHONY : ft_free.c.s
-
 ft_lexer.o: ft_lexer.c.o
 .PHONY : ft_lexer.o
 
@@ -177,29 +153,29 @@ ft_lexer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer.c.s
 .PHONY : ft_lexer.c.s
 
-ft_lexer2.o: ft_lexer2.c.o
-.PHONY : ft_lexer2.o
+ft_move_proc.o: ft_move_proc.c.o
+.PHONY : ft_move_proc.o
 
 # target to build an object file
-ft_lexer2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer2.c.o
-.PHONY : ft_lexer2.c.o
+ft_move_proc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.o
+.PHONY : ft_move_proc.c.o
 
-ft_lexer2.i: ft_lexer2.c.i
-.PHONY : ft_lexer2.i
+ft_move_proc.i: ft_move_proc.c.i
+.PHONY : ft_move_proc.i
 
 # target to preprocess a source file
-ft_lexer2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer2.c.i
-.PHONY : ft_lexer2.c.i
+ft_move_proc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.i
+.PHONY : ft_move_proc.c.i
 
-ft_lexer2.s: ft_lexer2.c.s
-.PHONY : ft_lexer2.s
+ft_move_proc.s: ft_move_proc.c.s
+.PHONY : ft_move_proc.s
 
 # target to generate assembly for a file
-ft_lexer2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer2.c.s
-.PHONY : ft_lexer2.c.s
+ft_move_proc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.s
+.PHONY : ft_move_proc.c.s
 
 ft_parser.o: ft_parser.c.o
 .PHONY : ft_parser.o
@@ -224,6 +200,54 @@ ft_parser.s: ft_parser.c.s
 ft_parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_parser.c.s
 .PHONY : ft_parser.c.s
+
+ft_path_utils.o: ft_path_utils.c.o
+.PHONY : ft_path_utils.o
+
+# target to build an object file
+ft_path_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_path_utils.c.o
+.PHONY : ft_path_utils.c.o
+
+ft_path_utils.i: ft_path_utils.c.i
+.PHONY : ft_path_utils.i
+
+# target to preprocess a source file
+ft_path_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_path_utils.c.i
+.PHONY : ft_path_utils.c.i
+
+ft_path_utils.s: ft_path_utils.c.s
+.PHONY : ft_path_utils.s
+
+# target to generate assembly for a file
+ft_path_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_path_utils.c.s
+.PHONY : ft_path_utils.c.s
+
+ft_utils_envp.o: ft_utils_envp.c.o
+.PHONY : ft_utils_envp.o
+
+# target to build an object file
+ft_utils_envp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o
+.PHONY : ft_utils_envp.c.o
+
+ft_utils_envp.i: ft_utils_envp.c.i
+.PHONY : ft_utils_envp.i
+
+# target to preprocess a source file
+ft_utils_envp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_envp.c.i
+.PHONY : ft_utils_envp.c.i
+
+ft_utils_envp.s: ft_utils_envp.c.s
+.PHONY : ft_utils_envp.s
+
+# target to generate assembly for a file
+ft_utils_envp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_envp.c.s
+.PHONY : ft_utils_envp.c.s
 
 ft_utils_lexer.o: ft_utils_lexer.c.o
 .PHONY : ft_utils_lexer.o
@@ -321,29 +345,53 @@ ft_utils_pars_dollar.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.s
 .PHONY : ft_utils_pars_dollar.c.s
 
-ft_utils_parser2.o: ft_utils_parser2.c.o
-.PHONY : ft_utils_parser2.o
+ft_utils_proc.o: ft_utils_proc.c.o
+.PHONY : ft_utils_proc.o
 
 # target to build an object file
-ft_utils_parser2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_parser2.c.o
-.PHONY : ft_utils_parser2.c.o
+ft_utils_proc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o
+.PHONY : ft_utils_proc.c.o
 
-ft_utils_parser2.i: ft_utils_parser2.c.i
-.PHONY : ft_utils_parser2.i
+ft_utils_proc.i: ft_utils_proc.c.i
+.PHONY : ft_utils_proc.i
 
 # target to preprocess a source file
-ft_utils_parser2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_parser2.c.i
-.PHONY : ft_utils_parser2.c.i
+ft_utils_proc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_proc.c.i
+.PHONY : ft_utils_proc.c.i
 
-ft_utils_parser2.s: ft_utils_parser2.c.s
-.PHONY : ft_utils_parser2.s
+ft_utils_proc.s: ft_utils_proc.c.s
+.PHONY : ft_utils_proc.s
 
 # target to generate assembly for a file
-ft_utils_parser2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_parser2.c.s
-.PHONY : ft_utils_parser2.c.s
+ft_utils_proc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_proc.c.s
+.PHONY : ft_utils_proc.c.s
+
+ft_utils_show.o: ft_utils_show.c.o
+.PHONY : ft_utils_show.o
+
+# target to build an object file
+ft_utils_show.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_show.c.o
+.PHONY : ft_utils_show.c.o
+
+ft_utils_show.i: ft_utils_show.c.i
+.PHONY : ft_utils_show.i
+
+# target to preprocess a source file
+ft_utils_show.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_show.c.i
+.PHONY : ft_utils_show.c.i
+
+ft_utils_show.s: ft_utils_show.c.s
+.PHONY : ft_utils_show.s
+
+# target to generate assembly for a file
+ft_utils_show.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_show.c.s
+.PHONY : ft_utils_show.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 .PHONY : libft/ft_atoi.o
@@ -417,53 +465,29 @@ libft/ft_calloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_calloc.c.s
 .PHONY : libft/ft_calloc.c.s
 
-libft/ft_countwords.o: libft/ft_countwords.c.o
-.PHONY : libft/ft_countwords.o
+libft/ft_freelst.o: libft/ft_freelst.c.o
+.PHONY : libft/ft_freelst.o
 
 # target to build an object file
-libft/ft_countwords.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_countwords.c.o
-.PHONY : libft/ft_countwords.c.o
+libft/ft_freelst.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_freelst.c.o
+.PHONY : libft/ft_freelst.c.o
 
-libft/ft_countwords.i: libft/ft_countwords.c.i
-.PHONY : libft/ft_countwords.i
-
-# target to preprocess a source file
-libft/ft_countwords.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_countwords.c.i
-.PHONY : libft/ft_countwords.c.i
-
-libft/ft_countwords.s: libft/ft_countwords.c.s
-.PHONY : libft/ft_countwords.s
-
-# target to generate assembly for a file
-libft/ft_countwords.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_countwords.c.s
-.PHONY : libft/ft_countwords.c.s
-
-libft/ft_getword.o: libft/ft_getword.c.o
-.PHONY : libft/ft_getword.o
-
-# target to build an object file
-libft/ft_getword.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_getword.c.o
-.PHONY : libft/ft_getword.c.o
-
-libft/ft_getword.i: libft/ft_getword.c.i
-.PHONY : libft/ft_getword.i
+libft/ft_freelst.i: libft/ft_freelst.c.i
+.PHONY : libft/ft_freelst.i
 
 # target to preprocess a source file
-libft/ft_getword.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_getword.c.i
-.PHONY : libft/ft_getword.c.i
+libft/ft_freelst.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_freelst.c.i
+.PHONY : libft/ft_freelst.c.i
 
-libft/ft_getword.s: libft/ft_getword.c.s
-.PHONY : libft/ft_getword.s
+libft/ft_freelst.s: libft/ft_freelst.c.s
+.PHONY : libft/ft_freelst.s
 
 # target to generate assembly for a file
-libft/ft_getword.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_getword.c.s
-.PHONY : libft/ft_getword.c.s
+libft/ft_freelst.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/libft/ft_freelst.c.s
+.PHONY : libft/ft_freelst.c.s
 
 libft/ft_getword_mod.o: libft/ft_getword_mod.c.o
 .PHONY : libft/ft_getword_mod.o
@@ -1578,18 +1602,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell_snino"
-	@echo "... ft_free.o"
-	@echo "... ft_free.i"
-	@echo "... ft_free.s"
 	@echo "... ft_lexer.o"
 	@echo "... ft_lexer.i"
 	@echo "... ft_lexer.s"
-	@echo "... ft_lexer2.o"
-	@echo "... ft_lexer2.i"
-	@echo "... ft_lexer2.s"
+	@echo "... ft_move_proc.o"
+	@echo "... ft_move_proc.i"
+	@echo "... ft_move_proc.s"
 	@echo "... ft_parser.o"
 	@echo "... ft_parser.i"
 	@echo "... ft_parser.s"
+	@echo "... ft_path_utils.o"
+	@echo "... ft_path_utils.i"
+	@echo "... ft_path_utils.s"
+	@echo "... ft_utils_envp.o"
+	@echo "... ft_utils_envp.i"
+	@echo "... ft_utils_envp.s"
 	@echo "... ft_utils_lexer.o"
 	@echo "... ft_utils_lexer.i"
 	@echo "... ft_utils_lexer.s"
@@ -1602,9 +1629,12 @@ help:
 	@echo "... ft_utils_pars_dollar.o"
 	@echo "... ft_utils_pars_dollar.i"
 	@echo "... ft_utils_pars_dollar.s"
-	@echo "... ft_utils_parser2.o"
-	@echo "... ft_utils_parser2.i"
-	@echo "... ft_utils_parser2.s"
+	@echo "... ft_utils_proc.o"
+	@echo "... ft_utils_proc.i"
+	@echo "... ft_utils_proc.s"
+	@echo "... ft_utils_show.o"
+	@echo "... ft_utils_show.i"
+	@echo "... ft_utils_show.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -1614,12 +1644,9 @@ help:
 	@echo "... libft/ft_calloc.o"
 	@echo "... libft/ft_calloc.i"
 	@echo "... libft/ft_calloc.s"
-	@echo "... libft/ft_countwords.o"
-	@echo "... libft/ft_countwords.i"
-	@echo "... libft/ft_countwords.s"
-	@echo "... libft/ft_getword.o"
-	@echo "... libft/ft_getword.i"
-	@echo "... libft/ft_getword.s"
+	@echo "... libft/ft_freelst.o"
+	@echo "... libft/ft_freelst.i"
+	@echo "... libft/ft_freelst.s"
 	@echo "... libft/ft_getword_mod.o"
 	@echo "... libft/ft_getword_mod.i"
 	@echo "... libft/ft_getword_mod.s"

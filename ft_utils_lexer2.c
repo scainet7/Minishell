@@ -12,16 +12,35 @@
 
 #include "minishell.h"
 
-char	*ft_check_dollar(t_mini *mini, char *str, char *buff)
+static char	*ft_join_dollar(t_list *list)
 {
-	if (ft_strchr(str, '$'))
-		buff = ft_split_dollar(mini, str, buff);
-	else
-		buff = ft_strdup(str);
-	return (buff);
+	t_list	*tmp_list;
+	char	*tmp;
+	char	*res;
+	int		len;
+
+	len = 1;
+	tmp_list = list;
+	while (tmp_list)
+	{
+		tmp = tmp_list->content;
+		len = len + ft_strlen(tmp);
+		tmp_list = tmp_list->next;
+	}
+	tmp_list = list;
+	res = (char *)malloc(len + 1);
+	res[0] = '\0';
+	while (tmp_list)
+	{
+		tmp = tmp_list->content;
+		res = ft_strcat(res, tmp);
+		tmp_list = tmp_list->next;
+	}
+	ft_freelst(list);
+	return (res);
 }
 
-char	*ft_split_dollar(t_mini *mini, char *str, char *buff)
+static char	*ft_split_dollar(t_mini *mini, char *str, char *buff)
 {
 	t_list	*tmp_list;
 	char	*tmp_str;
@@ -50,30 +69,11 @@ char	*ft_split_dollar(t_mini *mini, char *str, char *buff)
 	return (buff);
 }
 
-char	*ft_join_dollar(t_list *list)
+char	*ft_check_dollar(t_mini *mini, char *str, char *buff)
 {
-	t_list	*tmp_list;
-	char	*tmp;
-	char	*res;
-	int		len;
-
-	len = 1;
-	tmp_list = list;
-	while (tmp_list)
-	{
-		tmp = tmp_list->content;
-		len = len + ft_strlen(tmp);
-		tmp_list = tmp_list->next;
-	}
-	tmp_list = list;
-	res = (char *)malloc(len + 1);
-	res[0] = '\0';
-	while (tmp_list)
-	{
-		tmp = tmp_list->content;
-		res = ft_strcat(res, tmp);
-		tmp_list = tmp_list->next;
-	}
-	ft_freelst(list);
-	return (res);
+	if (ft_strchr(str, '$'))
+		buff = ft_split_dollar(mini, str, buff);
+	else
+		buff = ft_strdup(str);
+	return (buff);
 }

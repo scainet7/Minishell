@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:21:28 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/16 19:36:25 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void	*ft_lex_quotes(t_mini *mini, char *line)
+static char	*ft_lex_quotes(t_mini *mini, char *line)
 {
 	if (ft_check_symbol(line) == 2)
 		line = ft_pars_quotes(mini, line, 34);
@@ -26,7 +26,7 @@ void	*ft_lex_quotes(t_mini *mini, char *line)
 	return (line);
 }
 
-void	ft_lexer(t_mini *mini)
+static void	ft_lex_symbols(t_mini *mini)
 {
 	char	*line;
 
@@ -49,13 +49,9 @@ void	ft_lexer(t_mini *mini)
 		else if (line && *line && *line != ' ')
 			line = ft_pars_words(mini, line);
 	}
-	if (!mini->error)
-		ft_lexer2(mini);
-	else
-		printf(RED"ERROR\n"END);
 }
 
-void	ft_lexer2(t_mini *mini)
+static void	ft_lexer2(t_mini *mini)
 {
 	t_list	*list;
 	char	*tmp;
@@ -68,9 +64,9 @@ void	ft_lexer2(t_mini *mini)
 		tmp = list->content;
 		if (list->flag == 1)
 			buff = ft_strdup(tmp);
-		if (list->flag == 2)
+		else if (list->flag == 2)
 			buff = ft_check_dollar(mini, tmp, buff);
-		if (list->flag == 0)
+		else if (list->flag == 0)
 			buff = ft_check_dollar(mini, tmp, buff);
 		ft_lstadd_back(&mini->words_list_mod, ft_lstnew(ft_strdup(buff)));
 		if (list->flag == 1)
@@ -84,21 +80,12 @@ void	ft_lexer2(t_mini *mini)
 	}
 }
 
-void	show(t_list *list, char *place)
+int	ft_lexer(t_mini *mini)
 {
-	int		i;
-	char	*tmp;
-	int		ds;
-
-	i = 0;
-	printf("%s\n", place);
-	while (list)
-	{
-		tmp = list->content;
-		ds = list->flag;
-		printf("%d ", i);
-		printf(BLU"%s "END RED"%d "END MAG"%d\n"END, tmp, ds, ft_strlen(tmp));
-		list = list->next;
-		i++;
-	}
+	ft_lex_symbols(mini);
+	if (!mini->error)
+		ft_lexer2(mini);
+	else
+		return (ft_pars_error(mini, NULL, mini->error));
+	return (mini->error);
 }

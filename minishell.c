@@ -6,11 +6,34 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:37:08 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/16 19:26:46 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+static void	ft_free_line_lst_cmd(t_mini *mini)
+{
+	mini->error = 0;
+	if (mini->line && *mini->line != '\0')
+		change_errno(mini);
+	ft_freelst(mini->words_list);
+	ft_freelst(mini->words_list_mod);
+	free_tcmd(mini->cmd);
+	if (mini->pids)
+		free(mini->pids);
+	mini->pids = NULL;
+}
+
+static void	check_var(t_list *var)
+{
+	if (!find_variable(var, "PWD"))
+		ft_lstadd_back(&var, ft_lstnew(ft_strdup("PWD")));
+	if (!find_variable(var, "OLDPWD"))
+		ft_lstadd_back(&var, ft_lstnew(ft_strdup("OLDPWD")));
+	if (!find_variable(var, "SHLVL"))
+		ft_lstadd_back(&var, ft_lstnew(ft_strdup("SHLVL=1")));
+}
 
 static void	ft_change_var(t_mini *mini, char *envp)
 {
@@ -42,6 +65,12 @@ static void	ft_init(t_mini *mini, char **envp)
 	mini->envp_list = ft_lstnew(ft_strdup(envp[i]));
 	while (envp[++i])
 		ft_change_var(mini, envp[i]);
+	check_var(mini->envp_list);
+	if (!find_variable(mini->envp_list, "?"))
+	{
+		ft_lstadd_back(&mini->envp_list, ft_lstnew(ft_strdup("?=0")));
+		ft_lstlast(mini->envp_list)->flag = -1;
+	}
 }
 
 int	main(int argc, char **argv, char **envp)
@@ -50,32 +79,30 @@ int	main(int argc, char **argv, char **envp)
 
 	(void)argc;
 	(void)argv;
-	mini.exit_flag = 1;
 	ft_init(&mini, envp);
 	while (mini.exit_flag)
 	{
-		mini.error = 0;
 		rl_replace_line("", 0);
 		mini.line = readline(MAG"username@minishell "END);
 		if (mini.line && *mini.line)
 			add_history(mini.line);
-		if (mini.line && *mini.line)
-		{
-			ft_lexer(&mini);
-			ft_parser(&mini);
-			show(mini.words_list, "lexer: ");
-			show(mini.words_list_mod, "lexer2: ");
-			show1(mini.cmd, "main: ");
-			free_tcmd(mini.cmd);
-			ft_freelst(mini.words_list);
-			ft_freelst(mini.words_list_mod);
-		}
 		if (!mini.line)
 		{
 			mini.exit_flag = 0;
 			printf("%s"BLU"exit\n"END, MAG"username@minishell "END);
 		}
+		if (mini.line && *mini.line)
+			if (!ft_lexer(&mini) && !ft_parser(&mini) && !mini.error)
+				ft_move_proc(&mini);
+		if (mini.line && *mini.line)
+			ft_free_line_lst_cmd(&mini);
 		free(mini.line);
 	}
+	ft_freelst(mini.envp_list);
 	return (0);
 }
+
+//show(mini.envp_list, "main: ");
+//show(mini.words_list, "lexer: ");
+//show(mini.words_list_mod, "lexer2: ");
+//show1(mini.cmd, "main: ");

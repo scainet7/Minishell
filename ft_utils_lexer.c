@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:49:42 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:25:12 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/16 13:54:51 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*ft_pars_symb(t_mini *mini, char *line, char c)
 {
 	char	*buff;
 
-	if (line[0] == c && line[1] == c)
+	if (line[0] == c && line[1] == c && line[2] != c)
 	{
 		buff = (char *)malloc(3);
 		buff[0] = c;
@@ -84,7 +84,8 @@ char	*ft_pars_symb(t_mini *mini, char *line, char c)
 		free(buff);
 		return (&line[1]);
 	}
-	mini->error = 1;
+	else if (line[0] == c && line[1] == c && line[3] == c)
+		mini->error = 2;
 	return (NULL);
 }
 
@@ -92,7 +93,7 @@ char	*ft_pars_star_and(t_mini *mini, char *line)
 {
 	char	*buff;
 
-	if (line[0] == 38 && line[1] == 38)
+	if (line[0] == 38 && line[1] == 38 && line[2] != 38)
 	{
 		buff = (char *)malloc(3);
 		buff[0] = 38;
@@ -102,7 +103,7 @@ char	*ft_pars_star_and(t_mini *mini, char *line)
 		free(buff);
 		return (&line[2]);
 	}
-	else if (line[0] == 42)
+	else if (line[0] == 42 && line[1] != 42)
 	{
 		buff = (char *)malloc(2);
 		buff[0] = 42;
@@ -111,6 +112,8 @@ char	*ft_pars_star_and(t_mini *mini, char *line)
 		free(buff);
 		return (&line[1]);
 	}
-	mini->error = 1;
+	else if ((line[0] == 38 && line[1] == 38 && line[3] == 38) \
+			|| (line[0] == 42 && line[1] == 42))
+		mini->error = 2;
 	return (NULL);
 }

@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:25:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 16:21:13 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/16 12:20:05 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void	ft_heredoc(t_cmd *tmp, int i)
+static void	ft_heredoc(t_cmd *tmp, int i)
 {
 	char	**cmd;
 	char	*hd;
@@ -37,7 +37,7 @@ void	ft_heredoc(t_cmd *tmp, int i)
 	tmp->fd[0] = p[0];
 }
 
-void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i)
+static void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i)
 {
 	int		fd;
 	char	**cmd;
@@ -66,7 +66,7 @@ void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i)
 		cmd[i - 1] = cmd[i + 1];
 }
 
-void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i)
+static void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i)
 {
 	int		fd;
 	char	**cmd;
@@ -91,7 +91,7 @@ void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i)
 		cmd[i - 1] = cmd[i + 1];
 }
 
-void	ft_pars_redirect(t_mini *mini)
+static void	ft_pars_redirect(t_mini *mini)
 {
 	t_cmd	*tmp;
 	int		i;
@@ -113,14 +113,14 @@ void	ft_pars_redirect(t_mini *mini)
 	}
 }
 
-void	ft_parser(t_mini *mini)
+int	ft_parser(t_mini *mini)
 {
 	t_list	*tmp;
 	t_cmd	*tmp_cmd;
 	char	**cmd;
 	int		i;
 
-	tmp = mini->words_list;
+	tmp = mini->words_list_mod;
 	tmp_cmd = NULL;
 	while (tmp)
 	{
@@ -138,24 +138,5 @@ void	ft_parser(t_mini *mini)
 	}
 	mini->cmd = tmp_cmd;
 	ft_pars_redirect(mini);
-}
-
-void	show1(t_cmd *cmd, char *place)
-{
-	t_cmd	*temp;
-	int		i;
-
-	temp = cmd;
-	printf("%s\n", place);
-	while (temp)
-	{
-		i = -1;
-		printf("SHOW:%d-> ", i + 2);
-		while (temp->comand[++i])
-			printf("'%s':%zu ", temp->comand[i], \
-				(size_t)ft_strlen(temp->comand[i]));
-		printf("| fd.in->%d fd.out->%d", cmd->fd[0], cmd->fd[1]);
-		printf("\n");
-		temp = temp->next;
-	}
+	return (mini->error);
 }

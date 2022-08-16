@@ -111,7 +111,8 @@
 				58,
 				59,
 				60,
-				61
+				61,
+				62
 			]
 		}
 	],
@@ -203,7 +204,8 @@
 				58,
 				59,
 				60,
-				61
+				61,
+				62
 			]
 		},
 		{
@@ -500,12 +502,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "ft_free.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "libft/ft_strjoin_free.c",
 			"sourceGroupIndex" : 0
 		},
@@ -548,31 +544,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "ft_utils_parser2.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "libft/ft_getword.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "libft/ft_countwords.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "libft/ft_getword_mod.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "ft_lexer2.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -585,6 +557,42 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "ft_utils_pars_dollar.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libft/ft_freelst.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ft_utils_show.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ft_move_proc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ft_utils_proc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ft_utils_envp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ft_path_utils.c",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 15:50:02 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:29:13 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/16 11:57:50 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
+void		ft_freelst(t_list *lst);
 void		ft_lstiter(t_list *lst, void (*f)(void *));
+int			ft_lstsize(t_list *lst);
 int			ft_atoi(const char *str);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
