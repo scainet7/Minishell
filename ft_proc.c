@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_move_proc.c                                     :+:      :+:    :+:   */
+/*   ft_proc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 13:30:28 by snino             #+#    #+#             */
-/*   Updated: 2022/08/16 17:45:24 by snino            ###   ########.fr       */
+/*   Created: 2022/08/17 17:35:10 by snino             #+#    #+#             */
+/*   Updated: 2022/08/17 17:35:10 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	ft_in_cmd(t_mini *mini, t_cmd *tmp_cmd, int *i, int *pipe_fd)
 	}
 }
 
-int	ft_move_proc(t_mini *mini)
+int	ft_proc(t_mini *mini)
 {
 	t_cmd	*tmp_cmd;
 	int		i;

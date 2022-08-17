@@ -12,6 +12,16 @@
 
 #include "minishell.h"
 
+void	change_errno(t_mini *mini)
+{
+	t_list	*temp;
+
+	temp = find_variable(mini->envp_list, "?");
+	free(temp->content);
+	temp->content = ft_strjoin_free("?=", ft_itoa(mini->error), 3);
+	temp->flag = -1;
+}
+
 t_list	*find_variable(t_list *var, char *line)
 {
 	t_list	*buf;

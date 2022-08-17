@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 16:38:29 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/17 17:25:19 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	ft_redirect(t_cmd *cmdd, int *p);
 void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i);
 void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i);
 
-int		ft_move_proc(t_mini *mini);
+int		ft_proc(t_mini *mini);
 char	**ft_exctract_envp(t_mini *mini);
 void	ft_add_pids(t_mini *mini);
 void	change_errno(t_mini *mini);

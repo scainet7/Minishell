@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*   ft_utils_show.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 12:11:44 by snino             #+#    #+#             */
-/*   Updated: 2022/08/16 18:46:45 by snino            ###   ########.fr       */
+/*   Created: 2022/08/17 17:37:15 by snino             #+#    #+#             */
+/*   Updated: 2022/08/17 17:37:15 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-void	change_errno(t_mini *mini)
-{
-	t_list	*temp;
-
-	temp = find_variable(mini->envp_list, "?");
-	free(temp->content);
-	temp->content = ft_strjoin_free("?=", ft_itoa(mini->error), 3);
-	temp->flag = -1;
-}
 
 void	show(t_list *list, char *place)
 {
