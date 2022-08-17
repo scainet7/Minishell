@@ -84,6 +84,9 @@
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_move_proc.c">
 			<Option target="minishell_snino"/>
 		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_pars_redirect.c">
+			<Option target="minishell_snino"/>
+		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_parser.c">
 			<Option target="minishell_snino"/>
 		</Unit>

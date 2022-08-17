@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/08/16 14:20:12 by snino            ###   ########.fr        #
+#    Updated: 2022/08/17 16:38:29 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ LIB		=	libft/libft.a
 SRCS :=		minishell.c			ft_lexer.c				ft_parser.c\
 			ft_utils_pars.c		ft_utils_lexer.c		ft_utils_lexer2.c\
 			ft_utils_show.c		ft_utils_proc.c			ft_move_proc.c\
-			ft_path_utils.c		ft_utils_envp.c			ft_utils_pars_dollar.c\
+			ft_path_utils.c		ft_utils_envp.c			ft_utils_redirect.c\
+			ft_utils_pars_dollar.c\
 
 OBJ := $(SRCS:%.c=%.o)
 

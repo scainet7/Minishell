@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/16 19:26:46 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/17 17:09:41 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,25 @@
 
 static void	ft_free_line_lst_cmd(t_mini *mini)
 {
-	mini->error = 0;
 	if (mini->line && *mini->line != '\0')
 		change_errno(mini);
-	ft_freelst(mini->words_list);
-	ft_freelst(mini->words_list_mod);
-	free_tcmd(mini->cmd);
-	if (mini->pids)
-		free(mini->pids);
+	if (mini->error == 0 || mini->error == 3)
+	{
+		ft_freelst(mini->words_list);
+		ft_freelst(mini->words_list_mod);
+		free_tcmd(mini->cmd);
+		if (mini->pids)
+			free(mini->pids);
+	}
+	else if (mini->error == 1)
+		ft_freelst(mini->words_list);
+	else if (mini->error == 2)
+	{
+		ft_freelst(mini->words_list);
+		ft_freelst(mini->words_list_mod);
+	}
 	mini->pids = NULL;
+	mini->error = 0;
 }
 
 static void	check_var(t_list *var)

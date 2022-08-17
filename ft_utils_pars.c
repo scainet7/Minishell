@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:43:13 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 16:14:33 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/17 15:03:00 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_memory_num(t_list *words_list, char *symbol, int len)
 	count = 1;
 	while (tmp)
 	{
-		if (!ft_memcmp(tmp->content, symbol, len))
+		if (!ft_memcmp(tmp->content, symbol, len) && tmp->flag == 0)
 			break ;
 		++count;
 		tmp = tmp->next;

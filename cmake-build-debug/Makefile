@@ -177,6 +177,30 @@ ft_move_proc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.s
 .PHONY : ft_move_proc.c.s
 
+ft_pars_redirect.o: ft_pars_redirect.c.o
+.PHONY : ft_pars_redirect.o
+
+# target to build an object file
+ft_pars_redirect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.o
+.PHONY : ft_pars_redirect.c.o
+
+ft_pars_redirect.i: ft_pars_redirect.c.i
+.PHONY : ft_pars_redirect.i
+
+# target to preprocess a source file
+ft_pars_redirect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.i
+.PHONY : ft_pars_redirect.c.i
+
+ft_pars_redirect.s: ft_pars_redirect.c.s
+.PHONY : ft_pars_redirect.s
+
+# target to generate assembly for a file
+ft_pars_redirect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.s
+.PHONY : ft_pars_redirect.c.s
+
 ft_parser.o: ft_parser.c.o
 .PHONY : ft_parser.o
 
@@ -1608,6 +1632,9 @@ help:
 	@echo "... ft_move_proc.o"
 	@echo "... ft_move_proc.i"
 	@echo "... ft_move_proc.s"
+	@echo "... ft_pars_redirect.o"
+	@echo "... ft_pars_redirect.i"
+	@echo "... ft_pars_redirect.s"
 	@echo "... ft_parser.o"
 	@echo "... ft_parser.i"
 	@echo "... ft_parser.s"

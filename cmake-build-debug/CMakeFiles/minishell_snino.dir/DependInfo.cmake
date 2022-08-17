@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/snino/Desktop/minishell_snino_norm/ft_lexer.c" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_move_proc.c" "CMakeFiles/minishell_snino.dir/ft_move_proc.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_move_proc.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_pars_redirect.c" "CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_parser.c" "CMakeFiles/minishell_snino.dir/ft_parser.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_parser.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_path_utils.c" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_envp.c" "CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o.d"
