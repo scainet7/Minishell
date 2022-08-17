@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:35:10 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 17:35:10 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/17 17:42:39 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@ static void	ft_in_cmd(t_mini *mini, t_cmd *tmp_cmd, int *i, int *pipe_fd)
 			continue ;
 		}
 		pipe(pipe_fd);
-		ft_child_proc(mini, tmp_cmd, i, pipe_fd);
+		if (ft_check_builtin(tmp_cmd))
+			ft_builtin(mini, tmp_cmd, pipe_fd);
+		else
+			ft_child_proc(mini, tmp_cmd, i, pipe_fd);
 		close(pipe_fd[P_IN]);
 		if (tmp_cmd->fd[0] != 0)
 			close(tmp_cmd->fd[0]);

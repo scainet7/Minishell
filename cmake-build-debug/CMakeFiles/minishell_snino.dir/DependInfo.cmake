@@ -8,17 +8,21 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/snino/Desktop/minishell_snino_norm/ft_builtin.c" "CMakeFiles/minishell_snino.dir/ft_builtin.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_builtin.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_echo.c" "CMakeFiles/minishell_snino.dir/ft_echo.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_echo.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_lexer.c" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o.d"
-  "/Users/snino/Desktop/minishell_snino_norm/ft_move_proc.c" "CMakeFiles/minishell_snino.dir/ft_move_proc.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_move_proc.c.o.d"
-  "/Users/snino/Desktop/minishell_snino_norm/ft_pars_redirect.c" "CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_parser.c" "CMakeFiles/minishell_snino.dir/ft_parser.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_parser.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_path_utils.c" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_proc.c" "CMakeFiles/minishell_snino.dir/ft_proc.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_proc.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_pwd.c" "CMakeFiles/minishell_snino.dir/ft_pwd.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_pwd.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_utils_builtin.c" "CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_envp.c" "CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_lexer.c" "CMakeFiles/minishell_snino.dir/ft_utils_lexer.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_lexer.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_lexer2.c" "CMakeFiles/minishell_snino.dir/ft_utils_lexer2.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_lexer2.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_pars.c" "CMakeFiles/minishell_snino.dir/ft_utils_pars.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_pars.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_pars_dollar.c" "CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_proc.c" "CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_utils_redirect.c" "CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_show.c" "CMakeFiles/minishell_snino.dir/ft_utils_show.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_show.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/libft/ft_atoi.c" "CMakeFiles/minishell_snino.dir/libft/ft_atoi.c.o" "gcc" "CMakeFiles/minishell_snino.dir/libft/ft_atoi.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/libft/ft_bzero.c" "CMakeFiles/minishell_snino.dir/libft/ft_bzero.c.o" "gcc" "CMakeFiles/minishell_snino.dir/libft/ft_bzero.c.o.d"

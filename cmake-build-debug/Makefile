@@ -129,6 +129,54 @@ minishell_snino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/build
 .PHONY : minishell_snino/fast
 
+ft_builtin.o: ft_builtin.c.o
+.PHONY : ft_builtin.o
+
+# target to build an object file
+ft_builtin.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_builtin.c.o
+.PHONY : ft_builtin.c.o
+
+ft_builtin.i: ft_builtin.c.i
+.PHONY : ft_builtin.i
+
+# target to preprocess a source file
+ft_builtin.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_builtin.c.i
+.PHONY : ft_builtin.c.i
+
+ft_builtin.s: ft_builtin.c.s
+.PHONY : ft_builtin.s
+
+# target to generate assembly for a file
+ft_builtin.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_builtin.c.s
+.PHONY : ft_builtin.c.s
+
+ft_echo.o: ft_echo.c.o
+.PHONY : ft_echo.o
+
+# target to build an object file
+ft_echo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_echo.c.o
+.PHONY : ft_echo.c.o
+
+ft_echo.i: ft_echo.c.i
+.PHONY : ft_echo.i
+
+# target to preprocess a source file
+ft_echo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_echo.c.i
+.PHONY : ft_echo.c.i
+
+ft_echo.s: ft_echo.c.s
+.PHONY : ft_echo.s
+
+# target to generate assembly for a file
+ft_echo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_echo.c.s
+.PHONY : ft_echo.c.s
+
 ft_lexer.o: ft_lexer.c.o
 .PHONY : ft_lexer.o
 
@@ -152,54 +200,6 @@ ft_lexer.s: ft_lexer.c.s
 ft_lexer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_lexer.c.s
 .PHONY : ft_lexer.c.s
-
-ft_move_proc.o: ft_move_proc.c.o
-.PHONY : ft_move_proc.o
-
-# target to build an object file
-ft_move_proc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.o
-.PHONY : ft_move_proc.c.o
-
-ft_move_proc.i: ft_move_proc.c.i
-.PHONY : ft_move_proc.i
-
-# target to preprocess a source file
-ft_move_proc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.i
-.PHONY : ft_move_proc.c.i
-
-ft_move_proc.s: ft_move_proc.c.s
-.PHONY : ft_move_proc.s
-
-# target to generate assembly for a file
-ft_move_proc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_move_proc.c.s
-.PHONY : ft_move_proc.c.s
-
-ft_pars_redirect.o: ft_pars_redirect.c.o
-.PHONY : ft_pars_redirect.o
-
-# target to build an object file
-ft_pars_redirect.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.o
-.PHONY : ft_pars_redirect.c.o
-
-ft_pars_redirect.i: ft_pars_redirect.c.i
-.PHONY : ft_pars_redirect.i
-
-# target to preprocess a source file
-ft_pars_redirect.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.i
-.PHONY : ft_pars_redirect.c.i
-
-ft_pars_redirect.s: ft_pars_redirect.c.s
-.PHONY : ft_pars_redirect.s
-
-# target to generate assembly for a file
-ft_pars_redirect.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pars_redirect.c.s
-.PHONY : ft_pars_redirect.c.s
 
 ft_parser.o: ft_parser.c.o
 .PHONY : ft_parser.o
@@ -248,6 +248,78 @@ ft_path_utils.s: ft_path_utils.c.s
 ft_path_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_path_utils.c.s
 .PHONY : ft_path_utils.c.s
+
+ft_proc.o: ft_proc.c.o
+.PHONY : ft_proc.o
+
+# target to build an object file
+ft_proc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_proc.c.o
+.PHONY : ft_proc.c.o
+
+ft_proc.i: ft_proc.c.i
+.PHONY : ft_proc.i
+
+# target to preprocess a source file
+ft_proc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_proc.c.i
+.PHONY : ft_proc.c.i
+
+ft_proc.s: ft_proc.c.s
+.PHONY : ft_proc.s
+
+# target to generate assembly for a file
+ft_proc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_proc.c.s
+.PHONY : ft_proc.c.s
+
+ft_pwd.o: ft_pwd.c.o
+.PHONY : ft_pwd.o
+
+# target to build an object file
+ft_pwd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pwd.c.o
+.PHONY : ft_pwd.c.o
+
+ft_pwd.i: ft_pwd.c.i
+.PHONY : ft_pwd.i
+
+# target to preprocess a source file
+ft_pwd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pwd.c.i
+.PHONY : ft_pwd.c.i
+
+ft_pwd.s: ft_pwd.c.s
+.PHONY : ft_pwd.s
+
+# target to generate assembly for a file
+ft_pwd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pwd.c.s
+.PHONY : ft_pwd.c.s
+
+ft_utils_builtin.o: ft_utils_builtin.c.o
+.PHONY : ft_utils_builtin.o
+
+# target to build an object file
+ft_utils_builtin.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o
+.PHONY : ft_utils_builtin.c.o
+
+ft_utils_builtin.i: ft_utils_builtin.c.i
+.PHONY : ft_utils_builtin.i
+
+# target to preprocess a source file
+ft_utils_builtin.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.i
+.PHONY : ft_utils_builtin.c.i
+
+ft_utils_builtin.s: ft_utils_builtin.c.s
+.PHONY : ft_utils_builtin.s
+
+# target to generate assembly for a file
+ft_utils_builtin.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.s
+.PHONY : ft_utils_builtin.c.s
 
 ft_utils_envp.o: ft_utils_envp.c.o
 .PHONY : ft_utils_envp.o
@@ -392,6 +464,30 @@ ft_utils_proc.s: ft_utils_proc.c.s
 ft_utils_proc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_proc.c.s
 .PHONY : ft_utils_proc.c.s
+
+ft_utils_redirect.o: ft_utils_redirect.c.o
+.PHONY : ft_utils_redirect.o
+
+# target to build an object file
+ft_utils_redirect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.o
+.PHONY : ft_utils_redirect.c.o
+
+ft_utils_redirect.i: ft_utils_redirect.c.i
+.PHONY : ft_utils_redirect.i
+
+# target to preprocess a source file
+ft_utils_redirect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.i
+.PHONY : ft_utils_redirect.c.i
+
+ft_utils_redirect.s: ft_utils_redirect.c.s
+.PHONY : ft_utils_redirect.s
+
+# target to generate assembly for a file
+ft_utils_redirect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.s
+.PHONY : ft_utils_redirect.c.s
 
 ft_utils_show.o: ft_utils_show.c.o
 .PHONY : ft_utils_show.o
@@ -1626,21 +1722,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell_snino"
+	@echo "... ft_builtin.o"
+	@echo "... ft_builtin.i"
+	@echo "... ft_builtin.s"
+	@echo "... ft_echo.o"
+	@echo "... ft_echo.i"
+	@echo "... ft_echo.s"
 	@echo "... ft_lexer.o"
 	@echo "... ft_lexer.i"
 	@echo "... ft_lexer.s"
-	@echo "... ft_move_proc.o"
-	@echo "... ft_move_proc.i"
-	@echo "... ft_move_proc.s"
-	@echo "... ft_pars_redirect.o"
-	@echo "... ft_pars_redirect.i"
-	@echo "... ft_pars_redirect.s"
 	@echo "... ft_parser.o"
 	@echo "... ft_parser.i"
 	@echo "... ft_parser.s"
 	@echo "... ft_path_utils.o"
 	@echo "... ft_path_utils.i"
 	@echo "... ft_path_utils.s"
+	@echo "... ft_proc.o"
+	@echo "... ft_proc.i"
+	@echo "... ft_proc.s"
+	@echo "... ft_pwd.o"
+	@echo "... ft_pwd.i"
+	@echo "... ft_pwd.s"
+	@echo "... ft_utils_builtin.o"
+	@echo "... ft_utils_builtin.i"
+	@echo "... ft_utils_builtin.s"
 	@echo "... ft_utils_envp.o"
 	@echo "... ft_utils_envp.i"
 	@echo "... ft_utils_envp.s"
@@ -1659,6 +1764,9 @@ help:
 	@echo "... ft_utils_proc.o"
 	@echo "... ft_utils_proc.i"
 	@echo "... ft_utils_proc.s"
+	@echo "... ft_utils_redirect.o"
+	@echo "... ft_utils_redirect.i"
+	@echo "... ft_utils_redirect.s"
 	@echo "... ft_utils_show.o"
 	@echo "... ft_utils_show.i"
 	@echo "... ft_utils_show.s"
