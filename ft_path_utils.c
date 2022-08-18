@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:04:09 by snino             #+#    #+#             */
-/*   Updated: 2022/08/16 17:46:48 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/18 18:59:18 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,10 @@ void	ft_find_path(char **cmd, char **env)
 	path = ft_get_path(cmd[0], env);
 	if (execve(path, cmd, env) == -1)
 	{
-		ft_putstr_fd("shell: ", 2);
+		ft_putstr_fd(MAG"username@minishell: "END YEL, 2);
 		ft_putstr_fd(cmd[0], 2);
 		ft_putstr_fd(": ", 2);
-		ft_putstr_fd("command not found\n", 2);
+		ft_putstr_fd("command not found\n"END, 2);
 		free(path);
 		exit(127);
 	}

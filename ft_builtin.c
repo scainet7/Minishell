@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:49:29 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 18:00:25 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/18 15:47:08 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd)
 	}
 	if (cmd && !ft_memcmp(cmd->comand[0], "pwd", 4))
 		ft_pwd(cmd);
-//	else if (cmd && !ft_memcmp(cmd->comand[0], "env", 4))
-//		ft_env(ms, cmd);
+	else if (cmd && !ft_memcmp(cmd->comand[0], "env", 4))
+		ft_env(mini, cmd);
 	else if (cmd && !ft_memcmp(cmd->comand[0], "echo", 5))
 		ft_echo(mini, cmd);
 //	else if (cmd && !ft_memcmp(cmd->comand[0], "unset", 6))
-//		ft_unset(ms, cmd);
-//	else if (cmd && !ft_memcmp(cmd->comand[0], "cd", 3))
-//		ft_cd(ms, cmd);
+//		ft_unset(mimi, cmd);
+	else if (cmd && !ft_memcmp(cmd->comand[0], "cd", 3))
+		ft_cd(mini, cmd);
 //	else if (cmd && !ft_memcmp(cmd->comand[0], "export", 7))
-//		ft_export(ms, cmd);
+//		ft_export(mini, cmd);
 //	else if (cmd && !ft_memcmp(cmd->comand[0], "exit", 5))
-//		ft_exit(ms, cmd);
+//		ft_exit(mini, cmd);
 }

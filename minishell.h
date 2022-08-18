@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 18:00:25 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/18 18:24:34 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,14 @@ typedef struct s_minishell
 	int		num_cmd;
 	int		*pids;
 	char	*line;
+	char 	*home;
 
 }		t_mini;
 
 void	add_history(char *line);
 
 t_cmd	*ft_cmd_new(void *cmd);
-t_list	*find_variable(t_list *var, char *line);
+t_list	*ft_search_envp(t_list *var, char *line);
 int		ft_memory_num(t_list *words_list, char *symbol, int len);
 void	free_tcmd(t_cmd *cmd);
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
@@ -86,6 +87,8 @@ void	ft_add_pids(t_mini *mini);
 void	change_errno(t_mini *mini);
 void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd);
 void	ft_pwd(t_cmd *cmd);
+void	ft_env(t_mini *mini, t_cmd *cmd);
+void	ft_cd(t_mini * mini, t_cmd *cmd);
 void	ft_echo(t_mini *mini, t_cmd *cmd);
 void	ft_find_path(char **cmd, char **env);
 void	ft_free(char **paths);

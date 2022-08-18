@@ -65,7 +65,10 @@ char	*ft_pars_dollar(char *str)
 	int		j;
 
 	i = 1;
-	while (ft_isalnum(str[i]))
+	if (str[i] != '?')
+		while (ft_isalnum(str[i]))
+			i++;
+	else
 		i++;
 	tmp = (char *) malloc(i);
 	j = 0;

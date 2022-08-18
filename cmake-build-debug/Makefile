@@ -153,6 +153,30 @@ ft_builtin.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_builtin.c.s
 .PHONY : ft_builtin.c.s
 
+ft_cd.o: ft_cd.c.o
+.PHONY : ft_cd.o
+
+# target to build an object file
+ft_cd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_cd.c.o
+.PHONY : ft_cd.c.o
+
+ft_cd.i: ft_cd.c.i
+.PHONY : ft_cd.i
+
+# target to preprocess a source file
+ft_cd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_cd.c.i
+.PHONY : ft_cd.c.i
+
+ft_cd.s: ft_cd.c.s
+.PHONY : ft_cd.s
+
+# target to generate assembly for a file
+ft_cd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_cd.c.s
+.PHONY : ft_cd.c.s
+
 ft_echo.o: ft_echo.c.o
 .PHONY : ft_echo.o
 
@@ -176,6 +200,30 @@ ft_echo.s: ft_echo.c.s
 ft_echo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_echo.c.s
 .PHONY : ft_echo.c.s
+
+ft_env.o: ft_env.c.o
+.PHONY : ft_env.o
+
+# target to build an object file
+ft_env.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_env.c.o
+.PHONY : ft_env.c.o
+
+ft_env.i: ft_env.c.i
+.PHONY : ft_env.i
+
+# target to preprocess a source file
+ft_env.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_env.c.i
+.PHONY : ft_env.c.i
+
+ft_env.s: ft_env.c.s
+.PHONY : ft_env.s
+
+# target to generate assembly for a file
+ft_env.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_env.c.s
+.PHONY : ft_env.c.s
 
 ft_lexer.o: ft_lexer.c.o
 .PHONY : ft_lexer.o
@@ -1725,9 +1773,15 @@ help:
 	@echo "... ft_builtin.o"
 	@echo "... ft_builtin.i"
 	@echo "... ft_builtin.s"
+	@echo "... ft_cd.o"
+	@echo "... ft_cd.i"
+	@echo "... ft_cd.s"
 	@echo "... ft_echo.o"
 	@echo "... ft_echo.i"
 	@echo "... ft_echo.s"
+	@echo "... ft_env.o"
+	@echo "... ft_env.i"
+	@echo "... ft_env.s"
 	@echo "... ft_lexer.o"
 	@echo "... ft_lexer.i"
 	@echo "... ft_lexer.s"

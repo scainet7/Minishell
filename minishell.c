@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 17:25:57 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/18 18:30:28 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	ft_free_line_lst_cmd(t_mini *mini)
 {
 	if (mini->line && *mini->line != '\0')
 		change_errno(mini);
-	if (mini->error == 0 || mini->error == 3)
+	if (mini->error == 0 || mini->error == 3 || mini->error == 127)
 	{
 		ft_freelst(mini->words_list);
 		ft_freelst(mini->words_list_mod);
@@ -33,19 +33,20 @@ static void	ft_free_line_lst_cmd(t_mini *mini)
 	}
 	mini->pids = NULL;
 	mini->error = 0;
+	free(mini->line);
 }
 
-static void	check_var(t_list *var)
+static void	ft_check_envp(t_list *envp)
 {
-	if (!find_variable(var, "PWD"))
-		ft_lstadd_back(&var, ft_lstnew(ft_strdup("PWD")));
-	if (!find_variable(var, "OLDPWD"))
-		ft_lstadd_back(&var, ft_lstnew(ft_strdup("OLDPWD")));
-	if (!find_variable(var, "SHLVL"))
-		ft_lstadd_back(&var, ft_lstnew(ft_strdup("SHLVL=1")));
+	if (!ft_search_envp(envp, "PWD"))
+		ft_lstadd_back(&envp, ft_lstnew(ft_strdup("PWD")));
+	if (!ft_search_envp(envp, "OLDPWD"))
+		ft_lstadd_back(&envp, ft_lstnew(ft_strdup("OLDPWD")));
+	if (!ft_search_envp(envp, "SHLVL"))
+		ft_lstadd_back(&envp, ft_lstnew(ft_strdup("SHLVL=1")));
 }
 
-static void	ft_change_var(t_mini *mini, char *envp)
+static void	ft_change_envp(t_mini *mini, char *envp)
 {
 	char	*pwd;
 
@@ -72,11 +73,12 @@ static void	ft_init(t_mini *mini, char **envp)
 
 	i = 0;
 	mini->exit_flag = 1;
+	mini->home = getenv("HOME");
 	mini->envp_list = ft_lstnew(ft_strdup(envp[i]));
 	while (envp[++i])
-		ft_change_var(mini, envp[i]);
-	check_var(mini->envp_list);
-	if (!find_variable(mini->envp_list, "?"))
+		ft_change_envp(mini, envp[i]);
+	ft_check_envp(mini->envp_list);
+	if (!ft_search_envp(mini->envp_list, "?"))
 	{
 		ft_lstadd_back(&mini->envp_list, ft_lstnew(ft_strdup("?=0")));
 		ft_lstlast(mini->envp_list)->flag = -1;
@@ -106,7 +108,6 @@ int	main(int argc, char **argv, char **envp)
 				ft_proc(&mini);
 		if (mini.line && *mini.line)
 			ft_free_line_lst_cmd(&mini);
-		free(mini.line);
 	}
 	ft_freelst(mini.envp_list);
 	return (0);

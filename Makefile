@@ -25,7 +25,8 @@ SRCS :=		minishell.c			ft_lexer.c				ft_parser.c\
 			ft_utils_show.c		ft_utils_proc.c			ft_proc.c\
 			ft_path_utils.c		ft_utils_envp.c			ft_utils_redirect.c\
 			ft_builtin.c		ft_utils_builtin.c		ft_pwd.c\
-			ft_echo.c			ft_utils_pars_dollar.c\
+			ft_echo.c			ft_env.c				ft_cd.c\
+			ft_utils_pars_dollar.c\
 
 OBJ := $(SRCS:%.c=%.o)
 

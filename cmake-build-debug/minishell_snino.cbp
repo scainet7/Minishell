@@ -81,7 +81,13 @@
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_builtin.c">
 			<Option target="minishell_snino"/>
 		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_cd.c">
+			<Option target="minishell_snino"/>
+		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_echo.c">
+			<Option target="minishell_snino"/>
+		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_env.c">
 			<Option target="minishell_snino"/>
 		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_lexer.c">

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:43:13 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 15:03:00 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/18 18:50:19 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,17 @@ void	free_tcmd(t_cmd *cmd)
 int	ft_pars_error(t_mini *mini, char *file, int error)
 {
 	if (error == 1)
-		ft_putstr_fd("shell: syntax error near unexpected token `newline'\n", 2);
+	{
+		ft_putstr_fd(MAG"username@minishell: "END, 2);
+		ft_putstr_fd(YEL"SYNTAX ERROR\n"END, 2);
+	}
 	else if (error == 2)
 		ft_putstr_fd("shell: syntax error near unexpected token `|'\n", 2);
 	if (error == 1 || error == 2)
 		return (258);
 	if (error == 3)
 	{
-		ft_putstr_fd("shell: ", 2);
+		ft_putstr_fd(MAG"username@minishell: "END, 2);
 		perror(file);
 		mini->error = 1;
 	}

@@ -993,6 +993,34 @@ CMakeFiles/minishell_snino.dir/ft_echo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_snino.dir/ft_echo.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/snino/Desktop/minishell_snino_norm/ft_echo.c -o CMakeFiles/minishell_snino.dir/ft_echo.c.s
 
+CMakeFiles/minishell_snino.dir/ft_env.c.o: CMakeFiles/minishell_snino.dir/flags.make
+CMakeFiles/minishell_snino.dir/ft_env.c.o: ../ft_env.c
+CMakeFiles/minishell_snino.dir/ft_env.c.o: CMakeFiles/minishell_snino.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/minishell_snino.dir/ft_env.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell_snino.dir/ft_env.c.o -MF CMakeFiles/minishell_snino.dir/ft_env.c.o.d -o CMakeFiles/minishell_snino.dir/ft_env.c.o -c /Users/snino/Desktop/minishell_snino_norm/ft_env.c
+
+CMakeFiles/minishell_snino.dir/ft_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell_snino.dir/ft_env.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/snino/Desktop/minishell_snino_norm/ft_env.c > CMakeFiles/minishell_snino.dir/ft_env.c.i
+
+CMakeFiles/minishell_snino.dir/ft_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_snino.dir/ft_env.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/snino/Desktop/minishell_snino_norm/ft_env.c -o CMakeFiles/minishell_snino.dir/ft_env.c.s
+
+CMakeFiles/minishell_snino.dir/ft_cd.c.o: CMakeFiles/minishell_snino.dir/flags.make
+CMakeFiles/minishell_snino.dir/ft_cd.c.o: ../ft_cd.c
+CMakeFiles/minishell_snino.dir/ft_cd.c.o: CMakeFiles/minishell_snino.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/minishell_snino.dir/ft_cd.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell_snino.dir/ft_cd.c.o -MF CMakeFiles/minishell_snino.dir/ft_cd.c.o.d -o CMakeFiles/minishell_snino.dir/ft_cd.c.o -c /Users/snino/Desktop/minishell_snino_norm/ft_cd.c
+
+CMakeFiles/minishell_snino.dir/ft_cd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell_snino.dir/ft_cd.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/snino/Desktop/minishell_snino_norm/ft_cd.c > CMakeFiles/minishell_snino.dir/ft_cd.c.i
+
+CMakeFiles/minishell_snino.dir/ft_cd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell_snino.dir/ft_cd.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/snino/Desktop/minishell_snino_norm/ft_cd.c -o CMakeFiles/minishell_snino.dir/ft_cd.c.s
+
 # Object files for target minishell_snino
 minishell_snino_OBJECTS = \
 "CMakeFiles/minishell_snino.dir/minishell.c.o" \
@@ -1060,7 +1088,9 @@ minishell_snino_OBJECTS = \
 "CMakeFiles/minishell_snino.dir/ft_builtin.c.o" \
 "CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o" \
 "CMakeFiles/minishell_snino.dir/ft_pwd.c.o" \
-"CMakeFiles/minishell_snino.dir/ft_echo.c.o"
+"CMakeFiles/minishell_snino.dir/ft_echo.c.o" \
+"CMakeFiles/minishell_snino.dir/ft_env.c.o" \
+"CMakeFiles/minishell_snino.dir/ft_cd.c.o"
 
 # External object files for target minishell_snino
 minishell_snino_EXTERNAL_OBJECTS =
@@ -1131,9 +1161,11 @@ minishell_snino: CMakeFiles/minishell_snino.dir/ft_builtin.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/ft_pwd.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/ft_echo.c.o
+minishell_snino: CMakeFiles/minishell_snino.dir/ft_env.c.o
+minishell_snino: CMakeFiles/minishell_snino.dir/ft_cd.c.o
 minishell_snino: CMakeFiles/minishell_snino.dir/build.make
 minishell_snino: CMakeFiles/minishell_snino.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking C executable minishell_snino"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/snino/Desktop/minishell_snino_norm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking C executable minishell_snino"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell_snino.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
