@@ -34,6 +34,6 @@ void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd)
 		ft_cd(mini, cmd);
 //	else if (cmd && !ft_memcmp(cmd->comand[0], "export", 7))
 //		ft_export(mini, cmd);
-//	else if (cmd && !ft_memcmp(cmd->comand[0], "exit", 5))
-//		ft_exit(mini, cmd);
+	else if (cmd && !ft_memcmp(cmd->comand[0], "exit", 5))
+		ft_exit(mini, cmd);
 }

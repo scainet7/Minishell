@@ -225,6 +225,30 @@ ft_env.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_env.c.s
 .PHONY : ft_env.c.s
 
+ft_exit.o: ft_exit.c.o
+.PHONY : ft_exit.o
+
+# target to build an object file
+ft_exit.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_exit.c.o
+.PHONY : ft_exit.c.o
+
+ft_exit.i: ft_exit.c.i
+.PHONY : ft_exit.i
+
+# target to preprocess a source file
+ft_exit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_exit.c.i
+.PHONY : ft_exit.c.i
+
+ft_exit.s: ft_exit.c.s
+.PHONY : ft_exit.s
+
+# target to generate assembly for a file
+ft_exit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_exit.c.s
+.PHONY : ft_exit.c.s
+
 ft_lexer.o: ft_lexer.c.o
 .PHONY : ft_lexer.o
 
@@ -1782,6 +1806,9 @@ help:
 	@echo "... ft_env.o"
 	@echo "... ft_env.i"
 	@echo "... ft_env.s"
+	@echo "... ft_exit.o"
+	@echo "... ft_exit.i"
+	@echo "... ft_exit.s"
 	@echo "... ft_lexer.o"
 	@echo "... ft_lexer.i"
 	@echo "... ft_lexer.s"

@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/snino/Desktop/minishell_snino_norm/ft_cd.c" "CMakeFiles/minishell_snino.dir/ft_cd.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_cd.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_echo.c" "CMakeFiles/minishell_snino.dir/ft_echo.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_echo.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_env.c" "CMakeFiles/minishell_snino.dir/ft_env.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_env.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_exit.c" "CMakeFiles/minishell_snino.dir/ft_exit.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_exit.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_lexer.c" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_lexer.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_parser.c" "CMakeFiles/minishell_snino.dir/ft_parser.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_parser.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_path_utils.c" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o.d"

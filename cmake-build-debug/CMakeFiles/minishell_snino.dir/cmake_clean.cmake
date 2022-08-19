@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell_snino.dir/ft_echo.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_env.c.o"
   "CMakeFiles/minishell_snino.dir/ft_env.c.o.d"
+  "CMakeFiles/minishell_snino.dir/ft_exit.c.o"
+  "CMakeFiles/minishell_snino.dir/ft_exit.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_lexer.c.o"
   "CMakeFiles/minishell_snino.dir/ft_lexer.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_parser.c.o"

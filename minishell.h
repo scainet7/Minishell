@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/19 14:46:35 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 17:41:48 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,9 @@ void	ft_add_pids(t_mini *mini);
 void	change_errno(t_mini *mini);
 void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd);
 void	ft_pwd(t_cmd *cmd);
-void	ft_env(t_mini *mini, t_cmd *cmd);
 void	ft_cd(t_mini *mini, t_cmd *cmd);
+void	ft_env(t_mini *mini, t_cmd *cmd);
+void	ft_exit(t_mini *mini, t_cmd *cmd);
 void	ft_echo(t_mini *mini, t_cmd *cmd);
 void	ft_find_path(char **cmd, char **env);
 void	ft_free(char **paths);
