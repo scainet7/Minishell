@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-int 	ft_check_builtin(t_cmd *cmd)
+int	ft_check_builtin(t_cmd *cmd)
 {
 	if (cmd && !ft_memcmp(cmd->comand[0], "echo", 5))
 		return (1);

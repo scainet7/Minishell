@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:36:22 by snino             #+#    #+#             */
-/*   Updated: 2022/08/18 19:53:03 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 12:39:23 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,22 @@ char	*ft_check_dollar(t_mini *mini, char *str, char *buff)
 	else
 		buff = ft_strdup(str);
 	return (buff);
+}
+
+void	ft_check_flag(t_mini *mini, t_list *list)
+{
+	if (list->flag == 1)
+		ft_lstlast(mini->words_list_mod)->flag = 1;
+	else if (list->flag == 2)
+		ft_lstlast(mini->words_list_mod)->flag = 2;
+	else
+		ft_lstlast(mini->words_list_mod)->flag = 0;
+}
+
+void	ft_check_space(t_mini *mini, t_list *list)
+{
+	if (list->space == 1)
+		ft_lstlast(mini->words_list_mod)->space = 1;
+	else
+		ft_lstlast(mini->words_list_mod)->space = 0;
 }

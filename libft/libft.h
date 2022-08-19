@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 15:50:02 by snino             #+#    #+#             */
-/*   Updated: 2022/08/16 11:57:50 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 12:31:46 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 {
 	void			*content;
 	int				flag;
+	int				space;
 	struct s_list	*next;
 }	t_list;
 

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:30:08 by snino             #+#    #+#             */
-/*   Updated: 2022/08/18 14:22:01 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 14:37:45 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ static void	ft_echo_print(t_mini *mini, char **cmd, int fd, int i)
 	while (tmp_list && cmd[i] && tmp_list->content == cmd[i])
 	{
 		ft_putstr_fd(cmd[i], fd);
-		++i;
+		if (tmp_list->space == 1)
+			ft_putstr_fd(" ", fd);
+		i++;
 		tmp_list = tmp_list->next;
 	}
 }
 
-void 	ft_echo(t_mini *mini, t_cmd *cmd)
+void	ft_echo(t_mini *mini, t_cmd *cmd)
 {
 	if (cmd->comand[1] && ft_strnstr(cmd->comand[1], "-n", 2))
 		ft_echo_print(mini, cmd->comand, mini->cmd->fd[1], 2);

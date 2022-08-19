@@ -15,7 +15,7 @@
 void	ft_pwd(t_cmd *cmd)
 {
 	char	*pwd;
-	char 	**tmp;
+	char	**tmp;
 	int		i;
 
 	i = 0;

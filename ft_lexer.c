@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 13:40:38 by snino             #+#    #+#             */
-/*   Updated: 2022/08/16 19:36:25 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 14:46:35 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ static void	ft_lex_symbols(t_mini *mini)
 			line = ft_pars_symb(mini, line, 60);
 		else if (line && *line && *line != ' ' && *line == 62)
 			line = ft_pars_symb(mini, line, 62);
-		else if (line && *line && *line != ' ' && (*line == 38 || *line == 42))
-			line = ft_pars_star_and(mini, line);
 		else if (line && *line && *line != ' ')
 			line = ft_pars_words(mini, line);
 	}
@@ -69,12 +67,8 @@ static void	ft_lexer2(t_mini *mini)
 		else if (list->flag == 0)
 			buff = ft_check_dollar(mini, tmp, buff);
 		ft_lstadd_back(&mini->words_list_mod, ft_lstnew(ft_strdup(buff)));
-		if (list->flag == 1)
-			ft_lstlast(mini->words_list_mod)->flag = 1;
-		else if (list->flag == 2)
-			ft_lstlast(mini->words_list_mod)->flag = 2;
-		else
-			ft_lstlast(mini->words_list_mod)->flag = 0;
+		ft_check_flag(mini, list);
+		ft_check_space(mini, list);
 		list = list->next;
 		free(buff);
 	}

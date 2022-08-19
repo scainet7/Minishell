@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:22:39 by snino             #+#    #+#             */
-/*   Updated: 2022/08/18 19:03:25 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 14:38:41 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*ft_path_dir(t_mini *mini, t_cmd *cmd)
 	return (buff);
 }
 
-void ft_cd(t_mini * mini, t_cmd *cmd)
+void	ft_cd(t_mini *mini, t_cmd *cmd)
 {
 	t_list	*tmp_list;
 	char	*dirrectory;

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/18 18:24:34 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 14:46:35 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct s_minishell
 	int		num_cmd;
 	int		*pids;
 	char	*line;
-	char 	*home;
+	char	*home;
 
 }		t_mini;
 
@@ -72,11 +72,12 @@ int		ft_pars_error(t_mini *mini, char *file, int error);
 char	*ft_pars_dollar(char *str);
 char	*ft_pars_envp(t_mini *mini, char *str);
 char	*ft_pars_words(t_mini *mini, char *line);
-char	*ft_pars_star_and(t_mini *mini, char *line);
 char	*ft_pars_symb(t_mini *mini, char *line, char c);
 char	*ft_pars_quotes(t_mini *mini, char *line, char c);
 char	*ft_check_dollar(t_mini *mini, char *str, char *buff);
 void	ft_redirect(t_cmd *cmdd, int *p);
+void	ft_check_flag(t_mini *mini, t_list *list);
+void	ft_check_space(t_mini *mini, t_list *list);
 void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i);
 void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i);
 
@@ -88,7 +89,7 @@ void	change_errno(t_mini *mini);
 void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd);
 void	ft_pwd(t_cmd *cmd);
 void	ft_env(t_mini *mini, t_cmd *cmd);
-void	ft_cd(t_mini * mini, t_cmd *cmd);
+void	ft_cd(t_mini *mini, t_cmd *cmd);
 void	ft_echo(t_mini *mini, t_cmd *cmd);
 void	ft_find_path(char **cmd, char **env);
 void	ft_free(char **paths);

@@ -43,7 +43,7 @@ static char	*ft_check_envplist(t_mini *mini, char *str)
 			tmp_list = tmp_list->next;
 	}
 	if (buff == NULL)
-		buff = " ";
+		buff = "";
 	return (buff);
 }
 

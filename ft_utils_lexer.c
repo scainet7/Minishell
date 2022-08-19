@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:36:10 by snino             #+#    #+#             */
-/*   Updated: 2022/08/17 17:36:10 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/19 14:49:43 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_pars_words(t_mini *mini, char *line)
 	buff[i] = '\0';
 	ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
 	free(buff);
+	if (line[i] == ' ')
+		ft_lstlast(mini->words_list)->space = 1;
 	return (&line[i]);
 }
 
@@ -58,6 +60,8 @@ char	*ft_pars_quotes(t_mini *mini, char *line, char c)
 		ft_lstlast(mini->words_list)->flag = 1;
 	len = ft_strlen(buff) + 2;
 	free(buff);
+	if (line[len] == ' ')
+		ft_lstlast(mini->words_list)->space = 1;
 	return (&line[len]);
 }
 
@@ -85,35 +89,6 @@ char	*ft_pars_symb(t_mini *mini, char *line, char c)
 		return (&line[1]);
 	}
 	else if (line[0] == c && line[1] == c && line[3] == c)
-		mini->error = 2;
-	return (NULL);
-}
-
-char	*ft_pars_star_and(t_mini *mini, char *line)
-{
-	char	*buff;
-
-	if (line[0] == 38 && line[1] == 38 && line[2] != 38)
-	{
-		buff = (char *)malloc(3);
-		buff[0] = 38;
-		buff[1] = 38;
-		buff[2] = '\0';
-		ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
-		free(buff);
-		return (&line[2]);
-	}
-	else if (line[0] == 42 && line[1] != 42)
-	{
-		buff = (char *)malloc(2);
-		buff[0] = 42;
-		buff[1] = '\0';
-		ft_lstadd_back(&mini->words_list, ft_lstnew(ft_strdup(buff)));
-		free(buff);
-		return (&line[1]);
-	}
-	else if ((line[0] == 38 && line[1] == 38 && line[3] == 38) \
-			|| (line[0] == 42 && line[1] == 42))
 		mini->error = 2;
 	return (NULL);
 }
