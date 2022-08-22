@@ -6,19 +6,20 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/19 17:42:05 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/22 19:06:59 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
-
 # define RED "\033[31m"
 # define GRE "\033[32m"
 # define YEL "\033[33m"
 # define BLU "\033[34m"
 # define MAG "\033[35m"
 # define END "\033[0m"
+# define P_IN 1
+# define P_OUT 0
 
 # include <stdio.h>
 # include <unistd.h>
@@ -29,9 +30,6 @@
 # include <stdarg.h>
 # include <fcntl.h>
 # include <errno.h>
-
-# define P_IN 1
-# define P_OUT 0
 
 typedef struct s_comand
 {
@@ -53,7 +51,6 @@ typedef struct s_minishell
 	int		*pids;
 	char	*line;
 	char	*home;
-
 }		t_mini;
 
 void	add_history(char *line);

@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/08/19 16:01:16 by snino            ###   ########.fr        #
+#    Updated: 2022/08/22 20:06:27 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRCS :=		minishell.c			ft_lexer.c				ft_parser.c\
 			ft_path_utils.c		ft_utils_envp.c			ft_utils_redirect.c\
 			ft_builtin.c		ft_utils_builtin.c		ft_pwd.c\
 			ft_echo.c			ft_env.c				ft_cd.c\
-			ft_exit.c			ft_unset.c				ft_utils_pars_dollar.c\
+			ft_exit.c			ft_unset.c				ft_export.c\
+			ft_utils_pars_dollar.c\
 
 OBJ := $(SRCS:%.c=%.o)
 
