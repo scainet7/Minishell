@@ -93,6 +93,9 @@
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_exit.c">
 			<Option target="minishell_snino"/>
 		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_export.c">
+			<Option target="minishell_snino"/>
+		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_lexer.c">
 			<Option target="minishell_snino"/>
 		</Unit>
@@ -106,6 +109,9 @@
 			<Option target="minishell_snino"/>
 		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_pwd.c">
+			<Option target="minishell_snino"/>
+		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_unset.c">
 			<Option target="minishell_snino"/>
 		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_utils_builtin.c">

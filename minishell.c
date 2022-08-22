@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/19 13:39:51 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/22 14:14:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ static void	ft_free_line_lst_cmd(t_mini *mini)
 	}
 	else if (mini->error == 1)
 		ft_freelst(mini->words_list);
-	else if (mini->error == 2)
-	{
-		ft_freelst(mini->words_list);
-		ft_freelst(mini->words_list_mod);
-	}
 	mini->pids = NULL;
 	mini->error = 0;
 	free(mini->line);

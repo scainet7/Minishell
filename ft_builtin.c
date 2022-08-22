@@ -28,12 +28,12 @@ void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd)
 		ft_env(mini, cmd);
 	else if (cmd && !ft_memcmp(cmd->comand[0], "echo", 5))
 		ft_echo(mini, cmd);
-//	else if (cmd && !ft_memcmp(cmd->comand[0], "unset", 6))
-//		ft_unset(mimi, cmd);
+	else if (cmd && !ft_memcmp(cmd->comand[0], "unset", 6))
+		ft_unset(mini, cmd);
 	else if (cmd && !ft_memcmp(cmd->comand[0], "cd", 3))
 		ft_cd(mini, cmd);
-//	else if (cmd && !ft_memcmp(cmd->comand[0], "export", 7))
-//		ft_export(mini, cmd);
+	else if (cmd && !ft_memcmp(cmd->comand[0], "export", 7))
+		ft_export(mini, cmd);
 	else if (cmd && !ft_memcmp(cmd->comand[0], "exit", 5))
 		ft_exit(mini, cmd);
 }

@@ -249,6 +249,30 @@ ft_exit.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_exit.c.s
 .PHONY : ft_exit.c.s
 
+ft_export.o: ft_export.c.o
+.PHONY : ft_export.o
+
+# target to build an object file
+ft_export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_export.c.o
+.PHONY : ft_export.c.o
+
+ft_export.i: ft_export.c.i
+.PHONY : ft_export.i
+
+# target to preprocess a source file
+ft_export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_export.c.i
+.PHONY : ft_export.c.i
+
+ft_export.s: ft_export.c.s
+.PHONY : ft_export.s
+
+# target to generate assembly for a file
+ft_export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_export.c.s
+.PHONY : ft_export.c.s
+
 ft_lexer.o: ft_lexer.c.o
 .PHONY : ft_lexer.o
 
@@ -368,6 +392,30 @@ ft_pwd.s: ft_pwd.c.s
 ft_pwd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pwd.c.s
 .PHONY : ft_pwd.c.s
+
+ft_unset.o: ft_unset.c.o
+.PHONY : ft_unset.o
+
+# target to build an object file
+ft_unset.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_unset.c.o
+.PHONY : ft_unset.c.o
+
+ft_unset.i: ft_unset.c.i
+.PHONY : ft_unset.i
+
+# target to preprocess a source file
+ft_unset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_unset.c.i
+.PHONY : ft_unset.c.i
+
+ft_unset.s: ft_unset.c.s
+.PHONY : ft_unset.s
+
+# target to generate assembly for a file
+ft_unset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_unset.c.s
+.PHONY : ft_unset.c.s
 
 ft_utils_builtin.o: ft_utils_builtin.c.o
 .PHONY : ft_utils_builtin.o
@@ -1809,6 +1857,9 @@ help:
 	@echo "... ft_exit.o"
 	@echo "... ft_exit.i"
 	@echo "... ft_exit.s"
+	@echo "... ft_export.o"
+	@echo "... ft_export.i"
+	@echo "... ft_export.s"
 	@echo "... ft_lexer.o"
 	@echo "... ft_lexer.i"
 	@echo "... ft_lexer.s"
@@ -1824,6 +1875,9 @@ help:
 	@echo "... ft_pwd.o"
 	@echo "... ft_pwd.i"
 	@echo "... ft_pwd.s"
+	@echo "... ft_unset.o"
+	@echo "... ft_unset.i"
+	@echo "... ft_unset.s"
 	@echo "... ft_utils_builtin.o"
 	@echo "... ft_utils_builtin.i"
 	@echo "... ft_utils_builtin.s"

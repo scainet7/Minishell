@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 11:01:39 by snino             #+#    #+#             */
-/*   Updated: 2022/08/15 15:28:07 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/22 14:17:22 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ static char	*ft_check_envplist(t_mini *mini, char *str)
 	while (tmp_list)
 	{
 		tmp_str = tmp_list->content;
-		if (!ft_memcmp(tmp_str, tmp, ft_strlen(tmp)))
+		if (!ft_memcmp(tmp_str, tmp, ft_strlen(tmp)) \
+			&& tmp_list->flag != 1)
 		{
 			buff = ft_trim_envp(tmp_str);
 			break ;

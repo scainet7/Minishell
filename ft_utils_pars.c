@@ -79,12 +79,9 @@ int	ft_pars_error(t_mini *mini, char *file, int error)
 	{
 		ft_putstr_fd(MAG"username@minishell: "END, 2);
 		ft_putstr_fd(YEL"SYNTAX ERROR\n"END, 2);
-	}
-	else if (error == 2)
-		ft_putstr_fd("shell: syntax error near unexpected token `|'\n", 2);
-	if (error == 1 || error == 2)
 		return (258);
-	if (error == 3)
+	}
+	else if (error == 3)
 	{
 		ft_putstr_fd(MAG"username@minishell: "END, 2);
 		perror(file);
