@@ -561,6 +561,30 @@ ft_utils_pars_dollar.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.s
 .PHONY : ft_utils_pars_dollar.c.s
 
+ft_utils_print_export.o: ft_utils_print_export.c.o
+.PHONY : ft_utils_print_export.o
+
+# target to build an object file
+ft_utils_print_export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.o
+.PHONY : ft_utils_print_export.c.o
+
+ft_utils_print_export.i: ft_utils_print_export.c.i
+.PHONY : ft_utils_print_export.i
+
+# target to preprocess a source file
+ft_utils_print_export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.i
+.PHONY : ft_utils_print_export.c.i
+
+ft_utils_print_export.s: ft_utils_print_export.c.s
+.PHONY : ft_utils_print_export.s
+
+# target to generate assembly for a file
+ft_utils_print_export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.s
+.PHONY : ft_utils_print_export.c.s
+
 ft_utils_proc.o: ft_utils_proc.c.o
 .PHONY : ft_utils_proc.o
 
@@ -1896,6 +1920,9 @@ help:
 	@echo "... ft_utils_pars_dollar.o"
 	@echo "... ft_utils_pars_dollar.i"
 	@echo "... ft_utils_pars_dollar.s"
+	@echo "... ft_utils_print_export.o"
+	@echo "... ft_utils_print_export.i"
+	@echo "... ft_utils_print_export.s"
 	@echo "... ft_utils_proc.o"
 	@echo "... ft_utils_proc.i"
 	@echo "... ft_utils_proc.s"

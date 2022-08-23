@@ -81,10 +81,10 @@ void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i);
 int		ft_proc(t_mini *mini);
 int		ft_check_builtin(t_cmd *cmd);
 char	**ft_exctract_envp(t_mini *mini);
+void	ft_pwd(t_cmd *cmd);
+void	ft_free(char **paths);
 void	ft_add_pids(t_mini *mini);
 void	change_errno(t_mini *mini);
-void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd);
-void	ft_pwd(t_cmd *cmd);
 void	ft_cd(t_mini *mini, t_cmd *cmd);
 void	ft_env(t_mini *mini, t_cmd *cmd);
 void	ft_exit(t_mini *mini, t_cmd *cmd);
@@ -92,7 +92,9 @@ void	ft_echo(t_mini *mini, t_cmd *cmd);
 void	ft_unset(t_mini *mini, t_cmd *cmd);
 void	ft_export(t_mini *mini, t_cmd *cmd);
 void	ft_find_path(char **cmd, char **env);
-void	ft_free(char **paths);
+void	ft_print_export(t_mini *mini, int fd);
+void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd);
+
 
 void	show(t_list *list, char *place);
 void	show1(t_cmd *cmd, char *place);

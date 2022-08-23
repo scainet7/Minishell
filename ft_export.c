@@ -6,83 +6,67 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 14:28:20 by snino             #+#    #+#             */
-/*   Updated: 2022/08/22 22:11:13 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/23 22:21:58 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static int ft_check_array(char **tmp_envp, char *str)
-{
-	int	i;
-
-	i = -1;
-	while (tmp_envp[++i])
-		if (tmp_envp[i] == str)
-			return (1);
-	return (0);
-}
-
-void ft_move_print(char *tmp, int fd)
-{
-	char	*str;
-//	char 	*tmp_str;
-//	int 	len;
-
-	str = ft_strdup(tmp);
-	ft_putstr_fd(str, fd);
-	ft_putstr_fd("\n", fd);
-	free(str);
-}
-
-static t_list	*ft_parser_export_list(t_list *list, char **tmp_envp)
-{
-	t_list	*res;
-	char	*str;
-
-	res = list;
-	str = NULL;
-	while (list)
-	{
-		if (ft_check_array(tmp_envp, res->content))
-			res = list;
-		str = ft_strdup(list->content);
-		if (ft_memchr(str, '=', ft_strlen(str)))
-			*(char *)ft_memchr(str, '=', ft_strlen(str)) = '\0';
-		if (ft_strncmp(str, (char *)res->content, ft_strlen(str) + 1) < 0 \
-			&& !ft_check_array(tmp_envp, (char *)list->content))
-			res = list;
-		list = list->next;
-		free(str);
-	}
-	return (res);
-}
-
-static void	ft_print_export(t_mini *mini, int fd)
+static void ft_check_arg_add(t_mini *mini, char *res)
 {
 	t_list	*tmp_list;
-	int 	i;
-	char	*tmp_envp[1000];
+	char 	*tmp;
 
-	i = -1;
-	while (++i < 1000)
-		tmp_envp[i] = NULL;
-	i = -1;
-	while (1)
+	tmp = ft_strdup(res);
+	if (ft_memchr(tmp, '=', ft_strlen(tmp)))
+		*(char *)ft_memchr(tmp, '=', ft_strlen(tmp)) = '\0';
+	tmp_list = ft_search_envp(mini->envp_list, tmp);
+	free(tmp);
+	if (tmp_list)
 	{
-		tmp_list = ft_parser_export_list(mini->envp_list, tmp_envp);
-		if (ft_check_array(tmp_envp, (char *)tmp_list->content))
-			break ;
-		if (tmp_list->flag == 0)
-			ft_move_print(tmp_list->content, fd);
-		tmp_envp[++i] = (char *)tmp_list->content;
+		free(tmp_list->content);
+		tmp_list->content = ft_strdup(res);
+	}
+	else
+		ft_lstadd_back(&mini->envp_list, ft_lstnew(ft_strdup(res)));
+}
+
+//static void ft_error_export(t_mini *mini)
+//{
+//}
+//
+static void	ft_add_arg_export(t_mini *mini, t_cmd *cmd)
+{
+	t_list	*tmp_list;
+	char	**args;
+	char 	*tmp_str;
+	char 	*res;
+	int		i;
+
+	i = 1;
+	args = cmd->comand;
+	tmp_list = mini->words_list_mod;
+	while (args[i])
+	{
+		while (tmp_list && tmp_list->content != args[i])
+			tmp_list = tmp_list->next;
+		res = ft_strdup(args[i]);
+		while (args[++i] && tmp_list->content && tmp_list->space == 0)
+		{
+			tmp_str =  ft_strcat(res, args[i]);
+			free(res);
+			res = ft_strdup(tmp_str);
+			tmp_list = tmp_list->next;
+		}
+		ft_check_arg_add(mini, res);
+		free(res);
 	}
 }
 
 void	ft_export(t_mini *mini, t_cmd *cmd)
 {
 	if (cmd->comand[1])
-		;
+		ft_add_arg_export(mini, cmd);
 	else
 		ft_print_export(mini, cmd->fd[1]);
 }

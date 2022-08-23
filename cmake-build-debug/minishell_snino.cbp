@@ -132,6 +132,9 @@
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_utils_pars_dollar.c">
 			<Option target="minishell_snino"/>
 		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_utils_print_export.c">
+			<Option target="minishell_snino"/>
+		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_utils_proc.c">
 			<Option target="minishell_snino"/>
 		</Unit>

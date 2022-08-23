@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell_snino.dir/ft_utils_pars.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o"
   "CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o.d"
+  "CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.o"
+  "CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o"
   "CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.o"

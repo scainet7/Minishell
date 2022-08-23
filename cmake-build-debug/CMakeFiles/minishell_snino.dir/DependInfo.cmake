@@ -26,6 +26,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_lexer2.c" "CMakeFiles/minishell_snino.dir/ft_utils_lexer2.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_lexer2.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_pars.c" "CMakeFiles/minishell_snino.dir/ft_utils_pars.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_pars.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_pars_dollar.c" "CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_pars_dollar.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_utils_print_export.c" "CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_print_export.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_proc.c" "CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_proc.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_redirect.c" "CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_redirect.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_show.c" "CMakeFiles/minishell_snino.dir/ft_utils_show.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_show.c.o.d"
