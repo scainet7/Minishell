@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell_snino.dir/ft_proc.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_pwd.c.o"
   "CMakeFiles/minishell_snino.dir/ft_pwd.c.o.d"
+  "CMakeFiles/minishell_snino.dir/ft_signal.c.o"
+  "CMakeFiles/minishell_snino.dir/ft_signal.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_unset.c.o"
   "CMakeFiles/minishell_snino.dir/ft_unset.c.o.d"
   "CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o"

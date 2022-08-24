@@ -111,6 +111,9 @@
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_pwd.c">
 			<Option target="minishell_snino"/>
 		</Unit>
+		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_signal.c">
+			<Option target="minishell_snino"/>
+		</Unit>
 		<Unit filename="/Users/snino/Desktop/minishell_snino_norm/ft_unset.c">
 			<Option target="minishell_snino"/>
 		</Unit>

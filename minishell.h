@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:57:21 by snino             #+#    #+#             */
-/*   Updated: 2022/08/22 19:06:59 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/24 18:09:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,10 @@ t_list	*ft_search_envp(t_list *var, char *line);
 int		ft_memory_num(t_list *words_list, char *symbol, int len);
 void	free_tcmd(t_cmd *cmd);
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
+
+void	ft_signal(void);
+void	ft_child_handler(int sig);
+void	ft_handler(int sig);
 
 int		ft_lexer(t_mini *mini);
 int		ft_parser(t_mini *mini);

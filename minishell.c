@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/22 21:16:41 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/24 17:45:51 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ static void	ft_init(t_mini *mini, char **envp)
 	int	i;
 
 	i = 0;
+	ft_signal();
 	mini->exit_flag = 1;
 	mini->home = getenv("HOME");
 	mini->envp_list = ft_lstnew(ft_strdup(envp[i]));

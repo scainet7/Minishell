@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/snino/Desktop/minishell_snino_norm/ft_path_utils.c" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_path_utils.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_proc.c" "CMakeFiles/minishell_snino.dir/ft_proc.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_proc.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_pwd.c" "CMakeFiles/minishell_snino.dir/ft_pwd.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_pwd.c.o.d"
+  "/Users/snino/Desktop/minishell_snino_norm/ft_signal.c" "CMakeFiles/minishell_snino.dir/ft_signal.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_signal.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_unset.c" "CMakeFiles/minishell_snino.dir/ft_unset.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_unset.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_builtin.c" "CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_builtin.c.o.d"
   "/Users/snino/Desktop/minishell_snino_norm/ft_utils_envp.c" "CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o" "gcc" "CMakeFiles/minishell_snino.dir/ft_utils_envp.c.o.d"

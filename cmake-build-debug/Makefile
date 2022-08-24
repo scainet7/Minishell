@@ -393,6 +393,30 @@ ft_pwd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_pwd.c.s
 .PHONY : ft_pwd.c.s
 
+ft_signal.o: ft_signal.c.o
+.PHONY : ft_signal.o
+
+# target to build an object file
+ft_signal.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_signal.c.o
+.PHONY : ft_signal.c.o
+
+ft_signal.i: ft_signal.c.i
+.PHONY : ft_signal.i
+
+# target to preprocess a source file
+ft_signal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_signal.c.i
+.PHONY : ft_signal.c.i
+
+ft_signal.s: ft_signal.c.s
+.PHONY : ft_signal.s
+
+# target to generate assembly for a file
+ft_signal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell_snino.dir/build.make CMakeFiles/minishell_snino.dir/ft_signal.c.s
+.PHONY : ft_signal.c.s
+
 ft_unset.o: ft_unset.c.o
 .PHONY : ft_unset.o
 
@@ -1899,6 +1923,9 @@ help:
 	@echo "... ft_pwd.o"
 	@echo "... ft_pwd.i"
 	@echo "... ft_pwd.s"
+	@echo "... ft_signal.o"
+	@echo "... ft_signal.i"
+	@echo "... ft_signal.s"
 	@echo "... ft_unset.o"
 	@echo "... ft_unset.i"
 	@echo "... ft_unset.s"
