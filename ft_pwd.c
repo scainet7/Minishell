@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:02:23 by snino             #+#    #+#             */
-/*   Updated: 2022/08/18 15:50:28 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/24 18:05:23 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void	ft_pwd(t_cmd *cmd)
+void	ft_pwd(t_mini *mini, t_cmd *cmd)
 {
 	char	*pwd;
 	char	**tmp;
@@ -27,5 +27,8 @@ void	ft_pwd(t_cmd *cmd)
 		free(pwd);
 	}
 	else
-		ft_putendl_fd("pwd: too many arguments", cmd->fd[STDOUT_FILENO]);
+	{
+		ft_putendl_fd(YEL"pwd: too many arguments"END, STDERR_FILENO);
+		mini->error = 3;
+	}
 }

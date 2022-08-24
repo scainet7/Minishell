@@ -6,18 +6,18 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 19:38:44 by snino             #+#    #+#             */
-/*   Updated: 2022/08/22 14:09:15 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/24 18:00:56 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static int	unset_error(char *var)
+static int	unset_error(char *str)
 {
-	ft_putstr_fd("username@minishell1: unset: ", 2);
-	ft_putchar_fd('`', 2);
-	ft_putstr_fd(var, 2);
-	ft_putstr_fd("': not a valid identifier\n", 2);
+	ft_putstr_fd(MAG"username@minishell: "END YEL, STDERR_FILENO);
+	ft_putstr_fd("unset: `", 2);
+	ft_putstr_fd(str, 2);
+	ft_putstr_fd("\': not a valid identifier\n"END, STDERR_FILENO);
 	return (1);
 }
 

@@ -100,13 +100,7 @@ int	main(int argc, char **argv, char **envp)
 		}
 		if (mini.line && *mini.line)
 			if (!ft_lexer(&mini) && !ft_parser(&mini) && !mini.error)
-			{
-				show(mini.envp_list, "main: ");
-show(mini.words_list, "lexer: ");
-show(mini.words_list_mod, "lexer2: ");
-show1(mini.cmd, "main: ");
 				ft_proc(&mini);
-			}
 		if (mini.line && *mini.line)
 			ft_free_line_lst_cmd(&mini);
 	}

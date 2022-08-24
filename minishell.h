@@ -81,7 +81,7 @@ void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i);
 int		ft_proc(t_mini *mini);
 int		ft_check_builtin(t_cmd *cmd);
 char	**ft_exctract_envp(t_mini *mini);
-void	ft_pwd(t_cmd *cmd);
+void	ft_pwd(t_mini *mini, t_cmd *cmd);
 void	ft_free(char **paths);
 void	ft_add_pids(t_mini *mini);
 void	change_errno(t_mini *mini);

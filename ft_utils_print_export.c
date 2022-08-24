@@ -12,7 +12,6 @@
 
 #include "minishell.h"
 
-
 static int	ft_check_array(char **tmp_envp, char *str)
 {
 	int	i;
@@ -27,7 +26,7 @@ static int	ft_check_array(char **tmp_envp, char *str)
 static void	ft_move_print(char *tmp, int fd)
 {
 	char	*str;
-	char 	*print_str;
+	char	*print_str;
 
 	print_str = NULL;
 	ft_putstr_fd("declare -x ", fd);
@@ -76,7 +75,7 @@ static t_list	*ft_parser_export_list(t_list *list, char **tmp_envp)
 void	ft_print_export(t_mini *mini, int fd)
 {
 	t_list	*tmp_list;
-	int 	i;
+	int		i;
 	char	*tmp_envp[1000];
 
 	i = -1;

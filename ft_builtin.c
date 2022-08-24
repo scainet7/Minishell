@@ -23,7 +23,7 @@ void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd)
 		cmd->next->fd[STDIN_FILENO] = pipe_fd[P_OUT];
 	}
 	if (cmd && !ft_memcmp(cmd->comand[0], "pwd", 4))
-		ft_pwd(cmd);
+		ft_pwd(mini, cmd);
 	else if (cmd && !ft_memcmp(cmd->comand[0], "env", 4))
 		ft_env(mini, cmd);
 	else if (cmd && !ft_memcmp(cmd->comand[0], "echo", 5))
