@@ -20,9 +20,12 @@ static void	ft_child_proc(t_mini *mini, t_cmd *tmp_cmd, int *i, int *pipe_fd)
 		tmp_cmd->next->fd[STDIN_FILENO] = pipe_fd[P_OUT];
 	if (tmp_cmd->next && tmp_cmd->fd[STDOUT_FILENO] == STDOUT_FILENO)
 		tmp_cmd->fd[STDOUT_FILENO] = pipe_fd[P_IN];
+	signal(SIGINT, ft_child_handler);
+	signal(SIGQUIT, ft_child_handler);
 	mini->pids[*i] = fork();
 	if (mini->pids[*i] == 0)
 	{
+		signal(SIGTSTP, SIG_DFL);
 		tmp_envp = ft_exctract_envp(mini);
 		ft_redirect(tmp_cmd, pipe_fd);
 		ft_find_path(tmp_cmd->comand, tmp_envp);

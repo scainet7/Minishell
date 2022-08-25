@@ -52,19 +52,18 @@ typedef struct s_minishell
 	char	*line;
 	char	*home;
 }		t_mini;
-
+//signal
+void	ft_signal(void);
+void	ft_handler(int sig);
 void	add_history(char *line);
-
+void	ft_child_handler(int sig);
+//utils_pars_cmd
 t_cmd	*ft_cmd_new(void *cmd);
 t_list	*ft_search_envp(t_list *var, char *line);
 int		ft_memory_num(t_list *words_list, char *symbol, int len);
 void	free_tcmd(t_cmd *cmd);
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
-
-void	ft_signal(void);
-void	ft_child_handler(int sig);
-void	ft_handler(int sig);
-
+//lexer_lexer2_parser
 int		ft_lexer(t_mini *mini);
 int		ft_parser(t_mini *mini);
 int		ft_check_symbol(char *line);
@@ -81,7 +80,7 @@ void	ft_check_flag(t_mini *mini, t_list *list);
 void	ft_check_space(t_mini *mini, t_list *list);
 void	ft_pars_redirect_left(t_mini *mini, t_cmd *tmp, int i);
 void	ft_pars_redirect_right(t_mini *mini, t_cmd *tmp, int i);
-
+//functions_execve_and_builtins
 int		ft_proc(t_mini *mini);
 int		ft_check_builtin(t_cmd *cmd);
 char	**ft_exctract_envp(t_mini *mini);
@@ -98,8 +97,7 @@ void	ft_export(t_mini *mini, t_cmd *cmd);
 void	ft_find_path(char **cmd, char **env);
 void	ft_print_export(t_mini *mini, int fd);
 void	ft_builtin(t_mini *mini, t_cmd *cmd, int *pipe_fd);
-
-
-void	show(t_list *list, char *place);
-void	show1(t_cmd *cmd, char *place);
+//show_functions
+//void	show(t_list *list, char *place);
+//void	show1(t_cmd *cmd, char *place);
 #endif
