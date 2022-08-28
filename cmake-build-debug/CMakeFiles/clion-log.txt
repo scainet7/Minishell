@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/snino/Desktop/minishell_snino_norm
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/snino/Desktop/minishell_snino_norm/cmake-build-debug
