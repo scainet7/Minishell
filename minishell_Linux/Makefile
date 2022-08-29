@@ -16,7 +16,7 @@ CC 				:= gcc
 
 HEADER 			:= minishell.h
 
-CFLAGS 			:= -g -Wall -Wextra -Werror
+CFLAGS 			:= -g #-Wall -Wextra -Werror
 
 FLAGS_RL		:=	-I /Users/$(USER)/.brew/opt/readline/include -lreadline
 
@@ -44,7 +44,7 @@ makelibft		:
 					@make -C $(LIB) all
 
 $(NAME)			:	$(HEADER) $(OBJ)
-					$(CC) $(CFLAGS) $(FLAGS_RL) $(OBJ) $(LIB)libft.a -o $(NAME)
+					$(CC) $(CFLAGS) $(OBJ) $(LIB)libft.a -o $(NAME) $(FLAGS_RL)
 
 $(OBJ_DIR)/%.o	:	%.c	$(HEADER)
 					@mkdir -p $(OBJ_DIR)
