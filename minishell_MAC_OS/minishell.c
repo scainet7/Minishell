@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:04:48 by snino             #+#    #+#             */
-/*   Updated: 2022/08/28 16:06:17 by snino            ###   ########.fr       */
+/*   Updated: 2022/08/29 18:12:24 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,8 +112,3 @@ int	main(int argc, char **argv, char **envp)
 	ft_freelst(mini.envp_list);
 	return (0);
 }
-
-//show(mini.envp_list, "main: ");
-//show(mini.words_list, "lexer: ");
-//show(mini.words_list_mod, "lexer2: ");
-//show1(mini.cmd, "main: ");

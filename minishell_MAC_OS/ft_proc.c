@@ -74,7 +74,7 @@ int	ft_proc(t_mini *mini)
 	while (++j < i)
 	{
 		waitpid(mini->pids[j], &status, 0);
-		mini->error = WEXITSTATUS(status);
+		mini->error = 0;
 	}
 	return (status);
 }
